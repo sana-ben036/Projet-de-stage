@@ -2,8 +2,9 @@
 
 ## Contexte
 
-Nom de site web : Fadaa-al-adala;
-Site web à but : non lucratif ;
+- Nom de site web : Fadaa-al-adala;
+
+- Site web à but : non lucratif ;
 
 ### Description : 
 Le site est intéressé par la publication de divers articles liés au domaine du droit marocain, qu'il s'agisse d'articles juridiques ou de lettres et thèses, y compris la jurisprudence.
