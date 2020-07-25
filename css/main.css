@@ -1070,7 +1070,7 @@ body {padding-right: 0px !important;}
   display: flex;
 }
 
-.breadcrumb-item+.breadcrumb-item::after {
+.breadcrumb-item+.breadcrumb-item::before {
   height: 100%;
   content: "/";
   font-size: 12px;
@@ -1295,7 +1295,7 @@ a.breadcrumb-item:hover {
 }
 
 .f1-l-3 {
-  font-family: Roboto-Medium;
+  font-family: 'Cairo', sans-serif;
   font-size: 30px;
   line-height: 1.3;
 }
