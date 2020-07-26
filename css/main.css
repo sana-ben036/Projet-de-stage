@@ -1070,7 +1070,7 @@ body {padding-right: 0px !important;}
   display: flex;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::after {
   height: 100%;
   content: "/";
   font-size: 12px;
