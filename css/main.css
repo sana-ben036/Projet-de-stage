@@ -1256,9 +1256,10 @@ a.breadcrumb-item:hover {
 }
 
 .f1-m-4 {
-  font-family: Roboto-Bold;
-  font-size: 16px;
+  font-family: 'Scheherazade', serif;
+  font-size: 24px;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .f1-m-5 {
