@@ -38,14 +38,14 @@
 				<div class="content-topbar container h-100">
 					<div class="left-topbar">
 						
-						<a href="login.html" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
 						
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 
@@ -79,7 +79,7 @@
 
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="images/logof.png" alt="IMG-LOGO"></a>
+					<a href="index.php"><img src="images/logof.png" alt="IMG-LOGO"></a>
 				</div>
 	
 			</div>
@@ -94,10 +94,10 @@
 						<a href="#" class="left-topbar-item">
 							الدخول
 						</a>
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 					</li>
@@ -119,7 +119,7 @@
 
 				<ul class="main-menu-m">
 					<li>
-						<a href="index.html">الرئيسية </a>
+						<a href="index.php">الرئيسية </a>
 
 						<span class="arrow-main-menu-m">
 							<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -127,23 +127,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">فضاء التشريع </a>
+						<a href="blog-list-01.php">فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">مقالات قانونية </a>
+						<a href="blog-list-01.php">مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">إجتهاد قضائي </a>
+						<a href="blog-list-01.php">إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">أنشطة علمية </a>
+						<a href="blog-list-01.php">أنشطة علمية </a>
 					</li>
 
 					<li>
-						<a href="blog-grid.html">صوت و صورة </a>
+						<a href="blog-grid.php">صوت و صورة </a>
 					</li>
 
 				</ul>
@@ -153,7 +153,7 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.jpg" alt="LOGO"></a>
+					<a href="index.php"><img src="images/logo.jpg" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
@@ -167,45 +167,45 @@
 				<div class="main-nav">
 					<!-- Menu desktop -->
 					<nav class="menu-desktop">
-						<a class="logo-stick" href="index.html">
+						<a class="logo-stick" href="index.php">
 							<img src="images/logof.png" alt="LOGO">
 						</a>
 
 						<ul class="main-menu">
 							<li class="main-menu-active">
-								<a href="index.html">الرئيسية </a>
+								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">فضاء التشريع </a>
+								<a href="blog-list-01.php">فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">قوانين </a></li>
-									<li><a href="category-01.html">مشاريع القوانين </a></li>
-									<li><a href="category-01.html">إتفاقيات </a></li>
+									<li><a href="category-01.php">قوانين </a></li>
+									<li><a href="category-01.php">مشاريع القوانين </a></li>
+									<li><a href="category-01.php">إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">مقالات قانونية  </a>
+								<a href="blog-list-01.php">مقالات قانونية  </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">دراسات  </a></li>
-									<li><a href="category-01.html">وجهة نظر  </a></li>
-									<li><a href="category-01.html">تعليق على قرار  </a></li>
+									<li><a href="category-01.php">دراسات  </a></li>
+									<li><a href="category-01.php">وجهة نظر  </a></li>
+									<li><a href="category-01.php">تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">إجتهاد قضائي  </a>
+								<a href="blog-list-01.php">إجتهاد قضائي  </a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">أنشطة علمية  </a>
+								<a href="blog-list-01.php">أنشطة علمية  </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">فعاليات  </a></li>
-									<li><a href="category-01.html">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php">فعاليات  </a></li>
+									<li><a href="category-01.php">تقارير و تغطية  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-grid.html">صوت و صورة  </a>
+								<a href="blog-grid.php">صوت و صورة  </a>
 							</li>
 
 						</ul>
@@ -222,7 +222,7 @@
 				<span class="breadcrumb-item f1-s-2 cl9">
 					صوت و صورة 
 				</span>
-				<a href="index.html" class="breadcrumb-item f1-s-2 cl9">
+				<a href="index.php" class="breadcrumb-item f1-s-2 cl9">
 					الرئيسية 
 				</a>
 
@@ -411,7 +411,7 @@
 										1
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										جائحة كورونا تجمع أساتذة قانون من المغرب والجزائر والعراق في ندوة افتراضية 
 									</a>
 								</li>
@@ -421,7 +421,7 @@
 										2
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										إشكالية التمييز بين خبرة التسيير والخبرة المحاسبية
 									</a>
 								</li>
@@ -431,7 +431,7 @@
 										3
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										ورقة حول موضوع الشرعية الجنائية الإجرائية في زمن كورونا
 									</a>
 								</li>
@@ -441,7 +441,7 @@
 										4
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										دور التحكيم الالكتروني في فض منازعات عقود التجارة الدولية
 									</a>
 								</li>
@@ -451,7 +451,7 @@
 										5
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										تقرير للندوة العلمية عن بعد حول موضوع: تداعيات كوفيد 19 على الأسرة وحقوق أطرافها
 									</a>
 								</li>
@@ -460,7 +460,7 @@
 
 						<!--  -->
 						<div class="flex-c-s p-b-50">
-							<a href="droit-pub.html">
+							<a href="droit-pub.php">
 								<img class="max-w-full" src="images/banner-02.jpg" alt="IMG">
 							</a>
 						</div>
@@ -625,31 +625,31 @@
 
 						<ul class="m-t--12">
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									فضاء التشريع (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									مقالات قانونية  (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									الإجتهاد القضائي (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 								    أنشطة علمية (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-grid.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-grid.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 								    صوت و صورة (22)
 								</a>
 							</li>

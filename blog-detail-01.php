@@ -39,14 +39,14 @@
 				<div class="content-topbar container h-100">
 					<div class="left-topbar">
 						
-						<a href="login.html" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
 						
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 
@@ -80,7 +80,7 @@
 
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="images/logof.png" alt="IMG-LOGO"></a>
+					<a href="index.php"><img src="images/logof.png" alt="IMG-LOGO"></a>
 				</div>
 	
 			</div>
@@ -92,13 +92,13 @@
 
 					<li class="left-topbar">
 
-						<a href="#" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 					</li>
@@ -120,7 +120,7 @@
 
 				<ul class="main-menu-m">
 					<li>
-						<a href="index.html">الرئيسية </a>
+						<a href="index.php">الرئيسية </a>
 
 						<span class="arrow-main-menu-m">
 							<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -128,23 +128,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">فضاء التشريع </a>
+						<a href="blog-list-01.php">فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">مقالات قانونية </a>
+						<a href="blog-list-01.php">مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">إجتهاد قضائي </a>
+						<a href="blog-list-01.php">إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">أنشطة علمية </a>
+						<a href="blog-list-01.php">أنشطة علمية </a>
 					</li>
 
 					<li>
-						<a href="blog-grid.html">صوت و صورة </a>
+						<a href="blog-grid.php">صوت و صورة </a>
 					</li>
 
 				</ul>
@@ -154,7 +154,7 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.jpg" alt="LOGO"></a>
+					<a href="index.php"><img src="images/logo.jpg" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
@@ -168,45 +168,49 @@
 				<div class="main-nav">
 					<!-- Menu desktop -->
 					<nav class="menu-desktop">
-						<a class="logo-stick" href="index.html">
+						<a class="logo-stick" href="index.php">
 							<img src="images/logof.png" alt="LOGO">
 						</a>
 
 						<ul class="main-menu">
 							<li class="main-menu-active">
-								<a href="index.html">الرئيسية </a>
+								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">فضاء التشريع </a>
+								<a href="blog-list-01.php?id=فضاء التشريع">
+									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">قوانين </a></li>
-									<li><a href="category-01.html">مشاريع القوانين </a></li>
-									<li><a href="category-01.html">إتفاقيات </a></li>
+									<li><a href="category-01.php">قوانين </a></li>
+									<li><a href="category-01.php">مشاريع القوانين </a></li>
+									<li><a href="category-01.php">إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">مقالات قانونية  </a>
+								<a href="blog-list-01.php?id=مقالات قانونية">
+									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">دراسات  </a></li>
-									<li><a href="category-01.html">وجهة نظر  </a></li>
-									<li><a href="category-01.html">تعليق على قرار  </a></li>
+									<li><a href="category-01.php">دراسات  </a></li>
+									<li><a href="category-01.php">وجهة نظر  </a></li>
+									<li><a href="category-01.php">تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">إجتهاد قضائي  </a>
+								<a href="blog-list-01.php?id=إجتهاد قضائي">
+									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">أنشطة علمية  </a>
+								<a href="blog-list-01.php?id=أنشطة علمية">
+									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">فعاليات  </a></li>
-									<li><a href="category-01.html">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php">فعاليات  </a></li>
+									<li><a href="category-01.php">تقارير و تغطية  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-grid.html">صوت و صورة  </a>
+								<a href="blog-grid.php">صوت و صورة  </a>
 							</li>
 
 						</ul>
@@ -224,7 +228,7 @@
 					دورة تكوينية حول "التحكيم الداخلي والدولي في المنازعات التجارية" بمدينة الرباط يومي السبت والاحد 28 و 29 يوليوز 2020							</h3>
 							
 				</span>
-				<a href="category-01.html" class="breadcrumb-item f1-s-2 cl9">
+				<a href="category-01.php" class="breadcrumb-item f1-s-2 cl9">
 					قوانين 
 				</a>
 				
@@ -290,7 +294,7 @@
 								</span>
 								
 								<div class="flex-wr-s-s size-w-0">
-									<a href="category-01.html" class="f1-s-2 cl8 hov-link1 m-r-15">
+									<a href="category-01.php" class="f1-s-2 cl8 hov-link1 m-r-15">
 										قوانين
 									</a>
 
@@ -341,31 +345,31 @@
 
 							<ul class="m-t--12">
 								<li class="how-bor1 p-rl-5 p-tb-10">
-									<a href="blog-list-01.html" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
+									<a href="blog-list-01.php" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
 										فضاء التشريع (22)
 									</a>
 								</li>
 	
 								<li class="how-bor1 p-rl-5 p-tb-10">
-									<a href="blog-list-01.html" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
+									<a href="blog-list-01.php" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
 										مقالات قانونية  (22)
 									</a>
 								</li>
 	
 								<li class="how-bor1 p-rl-5 p-tb-10">
-									<a href="blog-list-01.html" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
+									<a href="blog-list-01.php" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
 										إجتهاد القضائي (22)
 									</a>
 								</li>
 	
 								<li class="how-bor1 p-rl-5 p-tb-10">
-									<a href="blog-list-01.html" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
+									<a href="blog-list-01.php" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
 										أنشطة علمية (22)
 									</a>
 								</li>
 	
 								<li class="how-bor1 p-rl-5 p-tb-10">
-									<a href="blog-grid.html" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
+									<a href="blog-grid.php" class="f1-s-5 cl1 hov-cl10 trans-03 p-tb-8">
 										صوت و صورة (22)
 									</a>
 								</li>
@@ -495,7 +499,7 @@
 
 									<div class="size-w-11">
 										<h6 class="p-b-4">
-											<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+											<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 												دور التحكيم الالكتروني في فض منازعات عقود التجارة الدولية 
 
 											</a>
@@ -524,7 +528,7 @@
 
 									<div class="size-w-11">
 										<h6 class="p-b-4">
-											<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+											<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 												إشكالية التمييز بين خبرة التسيير والخبرة المحاسبية											</a>
 										</h6>
 
@@ -551,7 +555,7 @@
 
 									<div class="size-w-11">
 										<h6 class="p-b-4">
-											<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+											<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 												تعليق على قرار محكمة النقض المغربية  شرط عدم المنافسة  في إطار عقد الشغل											</a>
 										</h6>
 
@@ -670,13 +674,13 @@
 
 						<ul>
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="blog-detail-01.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="size-w-4 wrap-pic-w hov1 trans-03">
 									<img src="images/popular-post-01.jpg" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-s-5 cl11 hov-cl10 trans-03">
 											جائحة كورونا تجمع أساتذة قانون من المغرب والجزائر والعراق في ندوة افتراضية
 										</a>
 									</h6>
@@ -688,13 +692,13 @@
 							</li>
 
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="blog-detail-01.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="size-w-4 wrap-pic-w hov1 trans-03">
 									<img src="images/popular-post-02.jpg" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-s-5 cl11 hov-cl10 trans-03">
 											إشكالية التمييز بين خبرة التسيير والخبرة المحاسبية
 										</a>
 									</h6>
@@ -706,13 +710,13 @@
 							</li>
 
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="blog-detail-01.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="size-w-4 wrap-pic-w hov1 trans-03">
 									<img src="images/popular-post-03.jpg" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-s-5 cl11 hov-cl10 trans-03">
 											ورقة حول موضوع الشرعية الجنائية الإجرائية في زمن كورونا
 										</a>
 									</h6>
@@ -734,31 +738,31 @@
 
 						<ul class="m-t--12">
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									فضاء التشريع (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									مقالات قانونية  (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									الإجتهاد القضائي (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 								    أنشطة علمية (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-grid.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-grid.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 								    صوت و صورة (22)
 								</a>
 							</li>

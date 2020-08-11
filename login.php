@@ -1,3 +1,7 @@
+<?php require'action.php'; ?>
+
+
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -37,14 +41,14 @@
 				<div class="content-topbar container h-100">
 					<div class="left-topbar">
 						
-						<a href="#" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
 						
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 
@@ -78,7 +82,7 @@
 
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="images/logof.png" alt="IMG-LOGO"></a>
+					<a href="index.php"><img src="images/logof.png" alt="IMG-LOGO"></a>
 				</div>
 	
 			</div>
@@ -90,13 +94,13 @@
 
 					<li class="left-topbar">
 
-						<a href="#" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="#" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 					</li>
@@ -123,7 +127,7 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.jpg" alt="LOGO"></a>
+					<a href="index.php"><img src="images/logo.jpg" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
@@ -137,23 +141,29 @@
 
 <div class="container">
     <div id="login">
-        <h3 class="text-center text-white pt-5 ">Login form</h3>
+		<h3 class="f1-l-3 text-center text-dark pt-5 ">تسجيل الدخــــول</h3><br><br>
+		<!-----------php/ alert---------------->
+		<?php if(isset($_SESSION['message'])){ ;?>
+            <div class=" f1-m-2 alert alert-<?= $_SESSION['msg_type'];?>  alert-dismissible text-center">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <b><?= $_SESSION['message'] ; ?></b>
+            </div>
+        <?php } unset($_SESSION['message']) ; ?>
+
+        <!-----------php------------------------>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-dark  f1-l-3  ">تسجيل الدخول </h3><br><br>
-                            <!-----------php/ alert---------------->
-
-                            <!-----------php------------------------>
+                        <form id="login-form" class="form" action="" method="POST">
+							
                             <div class="form-group">
                                 <label for="username" class="text-dark f2-s-1">البريد الإلكتروني:</label><br>
-                                <input type="email" name="email" id="email" class="form-control" >
+                                <input type="email" name="email" id="email" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-dark f2-s-1">كلمة السر:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-dark f2-s-1"><span>تذكرني</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
