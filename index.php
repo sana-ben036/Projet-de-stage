@@ -1,3 +1,6 @@
+<?php require'action.php'; ?>
+
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -37,14 +40,14 @@
 				<div class="content-topbar container h-100">
 					<div class="left-topbar">
 						
-						<a href="login.html" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
 						
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 
@@ -78,7 +81,7 @@
 
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="images/logof.png" alt="IMG-LOGO"></a>
+					<a href="index.php"><img src="images/logof.png" alt="IMG-LOGO"></a>
 				</div>
 	
 			</div>
@@ -90,13 +93,13 @@
 
 					<li class="left-topbar">
 
-						<a href="#" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 					</li>
@@ -118,7 +121,7 @@
 
 				<ul class="main-menu-m">
 					<li>
-						<a href="index.html">الرئيسية </a>
+						<a href="index.php">الرئيسية </a>
 
 						<span class="arrow-main-menu-m">
 							<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -126,23 +129,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">فضاء التشريع </a>
+						<a href="blog-list-01.php">فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">مقالات قانونية </a>
+						<a href="blog-list-01.php">مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">إجتهاد قضائي </a>
+						<a href="blog-list-01.php">إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">أنشطة علمية </a>
+						<a href="blog-list-01.php">أنشطة علمية </a>
 					</li>
 
 					<li>
-						<a href="blog-grid.html">صوت و صورة </a>
+						<a href="blog-grid.php">صوت و صورة </a>
 					</li>
 
 				</ul>
@@ -152,7 +155,7 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.jpg" alt="LOGO"></a>
+					<a href="index.php"><img src="images/logo.jpg" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
@@ -166,45 +169,49 @@
 				<div class="main-nav">
 					<!-- Menu desktop -->
 					<nav class="menu-desktop">
-						<a class="logo-stick" href="index.html">
+						<a class="logo-stick" href="index.php">
 							<img src="images/logof.png" alt="LOGO">
 						</a>
 
 						<ul class="main-menu">
 							<li class="main-menu-active">
-								<a href="index.html">الرئيسية </a>
+								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">فضاء التشريع </a>
+								<a href="blog-list-01.php?id=فضاء التشريع">
+									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">قوانين </a></li>
-									<li><a href="category-01.html">مشاريع القوانين </a></li>
-									<li><a href="category-01.html">إتفاقيات </a></li>
+									<li><a href="category-01.php">قوانين </a></li>
+									<li><a href="category-01.php">مشاريع القوانين </a></li>
+									<li><a href="category-01.php">إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">مقالات قانونية  </a>
+								<a href="blog-list-01.php?id=مقالات قانونية">
+									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">دراسات  </a></li>
-									<li><a href="category-01.html">وجهة نظر  </a></li>
-									<li><a href="category-01.html">تعليق على قرار  </a></li>
+									<li><a href="category-01.php">دراسات  </a></li>
+									<li><a href="category-01.php">وجهة نظر  </a></li>
+									<li><a href="category-01.php">تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">إجتهاد قضائي  </a>
+								<a href="blog-list-01.php?id=إجتهاد قضائي">
+									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">أنشطة علمية  </a>
+								<a href="blog-list-01.php?id=أنشطة علمية">
+									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">فعاليات  </a></li>
-									<li><a href="category-01.html">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php">فعاليات  </a></li>
+									<li><a href="category-01.php">تقارير و تغطية  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-grid.html">صوت و صورة  </a>
+								<a href="blog-grid.php">صوت و صورة  </a>
 							</li>
 
 						</ul>
@@ -251,15 +258,15 @@
 			<div class="row m-rl--1">
 				<div class="col-md-6 p-rl-1 p-b-2">
 					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url(images/post-01.jpg);">
-						<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
+						<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
 
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-							<a href="blog-list-01.html" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+							<a href="blog-list-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 								إجتهاد قضائي 
 							</a>
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
-								<a href="blog-detail-01.html" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
+								<a href="blog-detail-01.php" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
 									قرار محكمة النقض: الوعد بالبيع – أداء باقي الثمن – الإيداع لدى الموثق
 								</a>
 							</h3>
@@ -272,15 +279,15 @@
 					<div class="row m-rl--1">
 						<div class="col-12 p-rl-1 p-b-2">
 							<div class="bg-img1 size-a-4 how1 pos-relative" style="background-image: url(images/post-02.jpg);">
-								<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
+								<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-24">
-									<a href="category-01.html" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="category-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										فعاليات 
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="blog-detail-01.html" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
 											مؤتمر مراكش الدولي حول العدالة - النسخة الأولى: استقلال السلطة القضائية بين ضمان حقوق المتقاضين واحترام قواعد سير العدالة 
 										</a>
 									</h3>
@@ -290,15 +297,15 @@
 
 						<div class="col-sm-6 p-rl-1 p-b-2">
 							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/post-03.jpg);">
-								<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
+								<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="category-01.html" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="category-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										دراسات 
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="blog-detail-01.html" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
 											مبدأ الاحتياط في عقود الخدمات السياحية – في ظل انتشار وباء كورونا –
 										</a>
 									</h3>
@@ -308,15 +315,15 @@
 
 						<div class="col-sm-6 p-rl-1 p-b-2">
 							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/post-04.jpg);">
-								<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
+								<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="category-01.html" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="category-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										وجهة نظر 
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="blog-detail-01.html" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
 											وقف تقادم الدعوى العمومية في ظل حالة الطوارئ الصحية 
 										</a>
 									</h3>
@@ -337,7 +344,7 @@
 					<div class="p-b-20">
 						<!-- مقالات قانونية  -->
 						<div class="tab01 p-b-20">
-							<a href="blog-list-01.html" class="tab01-head how2 how2-cl1 bocl12 flex-s-c m-r-10 m-r-0-sr991">
+							<a href="blog-list-01.php" class="tab01-head how2 how2-cl1 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
 								<h3 class="f1-m-2 cl12 tab01-title">
 									مقالات قانونية 
@@ -355,13 +362,13 @@
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
 											<div class="m-b-30">
-												<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 													<img src="images/post-05.jpg" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 															دور التحكيم الالكتروني في فض منازعات عقود التجارة الدولية 
 														</a>
 													</h5>
@@ -386,13 +393,13 @@
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-06.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 												        إشكالية التمييز بين خبرة التسيير والخبرة المحاسبية
 
 														</a>
@@ -416,13 +423,13 @@
 											
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-07.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															تعليق على قرار محكمة النقض المغربية  شرط عدم المنافسة  في إطار عقد الشغل
 
 														</a>
@@ -446,13 +453,13 @@
 
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-08.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															ورقة حول موضوع الشرعية الجنائية الإجرائية في زمن كورونا
 														</a>
 													</h5>
@@ -489,7 +496,7 @@
 
 						<!-- فضاء التشريع -->
 						<div class="tab01 p-b-20">
-							<a href="blog-list-01.html" class="tab01-head how2 how2-cl2 bocl12 flex-s-c m-r-10 m-r-0-sr991">
+							<a href="blog-list-01.php" class="tab01-head how2 how2-cl2 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
 								<h3 class="f1-m-2 cl13 tab01-title">
 									فضاء التشريع 
@@ -510,13 +517,13 @@
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
 											<div class="m-b-30">
-												<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 													<img src="images/post-10.jpg" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 															مرسوم يقضي بتحديد أتعاب الموثقين، وكيفية استيفائها
  
 														</a>
@@ -542,13 +549,13 @@
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-11.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															القانون رقم 73.17 المتعلق بمساطر صعوبات المقاولة
  
 														</a>
@@ -572,13 +579,13 @@
 											
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-12.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															التبادر التجاري الحر بين المغرب و الإتحاد الأوروبي  
 														</a>
 													</h5>
@@ -601,13 +608,13 @@
 
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-13.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															القانون المتعلق بمهنة المحاماة
  
 														</a>
@@ -644,7 +651,7 @@
 
 						<!-- أنشطة علمية -->
 						<div class="tab01 p-b-20">
-							<a href="blog-list-01.html" class="tab01-head how2 how2-cl3 bocl12 flex-s-c m-r-10 m-r-0-sr991">
+							<a href="blog-list-01.php" class="tab01-head how2 how2-cl3 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
 								<h3 class="f1-m-2 cl14 tab01-title">
 									أنشطة علمية 
@@ -665,13 +672,13 @@
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
 											<div class="m-b-30">
-												<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 													<img src="images/post-14.jpg" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 															دورة تكوينية حول "التحكيم الداخلي والدولي في المنازعات التجارية" بمدينة الرباط يومي السبت والاحد 28 و 29 يوليوز 2018
  
 														</a>
@@ -697,13 +704,13 @@
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-15.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															تقرير للندوة العلمية عن بعد حول موضوع: تداعيات كوفيد 19 على الأسرة وحقوق أطرافها 
 														</a>
 													</h5>
@@ -726,13 +733,13 @@
 											
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-16.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															جائحة كورونا تجمع أساتذة قانون من المغرب والجزائر والعراق في ندوة افتراضية 
 														</a>
 													</h5>
@@ -755,13 +762,13 @@
 
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
+												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
 													<img src="images/post-17.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
+														<a href="blog-detail-01.php" class="f1-s-5 cl3 hov-cl10 trans-03">
 															مؤتمر مراكش الدولي حول العدالة - النسخة الأولى: استقلال السلطة القضائية بين ضمان حقوق المتقاضين واحترام قواعد سير العدالة 
 														</a>
 													</h5>
@@ -814,7 +821,7 @@
 										1
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										جائحة كورونا تجمع أساتذة قانون من المغرب والجزائر والعراق في ندوة افتراضية 
 									</a>
 								</li>
@@ -824,7 +831,7 @@
 										2
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										إشكالية التمييز بين خبرة التسيير والخبرة المحاسبية
 									</a>
 								</li>
@@ -834,7 +841,7 @@
 										3
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										ورقة حول موضوع الشرعية الجنائية الإجرائية في زمن كورونا
 									</a>
 								</li>
@@ -844,7 +851,7 @@
 										4
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										دور التحكيم الالكتروني في فض منازعات عقود التجارة الدولية
 									</a>
 								</li>
@@ -854,7 +861,7 @@
 										5
 									</div>
 
-									<a href="blog-detail-01.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
 										تقرير للندوة العلمية عن بعد حول موضوع: تداعيات كوفيد 19 على الأسرة وحقوق أطرافها
 									</a>
 								</li>
@@ -863,7 +870,7 @@
 
 						<!-- banner -->
 						<div class="flex-c-s p-t-8">
-							<a href="droit-pub.html">
+							<a href="droit-pub.php">
 								<img class="max-w-full" src="images/banner-02.jpg" alt="IMG">
 							</a>
 						</div>
@@ -951,13 +958,13 @@
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 									<img src="images/latest-01.jpg" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
 										</a>
 									</h5>
@@ -982,13 +989,13 @@
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 									<img src="images/latest-01.jpg" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
 										</a>
 									</h5>
@@ -1013,13 +1020,13 @@
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 									<img src="images/latest-01.jpg" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
 										</a>
 									</h5>
@@ -1044,13 +1051,13 @@
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 									<img src="images/latest-01.jpg" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
 										</a>
 									</h5>
@@ -1075,13 +1082,13 @@
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 									<img src="images/latest-01.jpg" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
 										</a>
 									</h5>
@@ -1106,13 +1113,13 @@
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
 									<img src="images/latest-01.jpg" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
 											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
 										</a>
 									</h5>
@@ -1140,7 +1147,7 @@
 					<div class="p-l-10 p-rl-0-sr991 p-b-20">
 						<!-- صوت و صورة -->
 						<div class="p-b-55">
-							<a href="blog-grid.html" class="how2 how2-cl4 flex-s-c m-b-35">
+							<a href="blog-grid.php" class="how2 how2-cl4 flex-s-c m-b-35">
 								<h3 class="f1-m-2 cl3 tab01-title">
 									صوت و صورة 
 								</h3>
@@ -1282,13 +1289,13 @@
 
 						<ul>
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="blog-detail-01.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="size-w-4 wrap-pic-w hov1 trans-03">
 									<img src="images/popular-post-01.jpg" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-s-5 cl11 hov-cl10 trans-03">
 											جائحة كورونا تجمع أساتذة قانون من المغرب والجزائر والعراق في ندوة افتراضية
 										</a>
 									</h6>
@@ -1300,13 +1307,13 @@
 							</li>
 
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="blog-detail-01.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="size-w-4 wrap-pic-w hov1 trans-03">
 									<img src="images/popular-post-02.jpg" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-s-5 cl11 hov-cl10 trans-03">
 											إشكالية التمييز بين خبرة التسيير والخبرة المحاسبية
 										</a>
 									</h6>
@@ -1318,13 +1325,13 @@
 							</li>
 
 							<li class="flex-wr-sb-s p-b-20">
-								<a href="blog-detail-01.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+								<a href="blog-detail-01.php" class="size-w-4 wrap-pic-w hov1 trans-03">
 									<img src="images/popular-post-03.jpg" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+										<a href="blog-detail-01.php" class="f1-s-5 cl11 hov-cl10 trans-03">
 											ورقة حول موضوع الشرعية الجنائية الإجرائية في زمن كورونا
 										</a>
 									</h6>
@@ -1346,31 +1353,31 @@
 
 						<ul class="m-t--12">
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									فضاء التشريع (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									مقالات قانونية  (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 									إجتهاد قضائي (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 								    أنشطة علمية (22)
 								</a>
 							</li>
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-grid.html" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<a href="blog-grid.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
 								    صوت و صورة (22)
 								</a>
 							</li>
