@@ -281,7 +281,7 @@
 										القانون رقم 28.08 الصادر بتنفيده الظهير شريف رقم 1.08.101 الصادر في 20 من شوال 1429 موافق 20 أكتوبر 2008 المتعلق بمهنة المحاماة 
 									</p>
 
-									<a href="blog-detail-02.php" class="f1-s-1 cl9 hov-cl10 trans-03">
+									<a href="blog-detail-01.php" class="f1-s-1 cl9 hov-cl10 trans-03">
 										المزيد 
 										<i class="m-l-2 fa fa-long-arrow-alt-right"></i>
 									</a>
