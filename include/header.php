@@ -1,3 +1,4 @@
+<?php require('connexion.php') ;?>
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -130,6 +131,20 @@
 					</li>
 				</ul>
 
+			<?php  
+			 $query = "SELECT * FROM 'category'";
+			 $query_category = mysqli_query($conn ,$query );
+				while($row = mysqli_fetch_assoc( $query_category)){
+					$id_cat = $row['id_cat'];
+					$title_cat = $row['title_cat'];
+				
+
+			
+			
+			
+			
+			?>
+
 				<ul class="main-menu-m">
 					<li>
 						<a href="index.php">الرئيسية </a>
@@ -140,10 +155,10 @@
 					</li>
 
 					<li>
-						<a href="category-01.php">فضاء التشريع </a>
+						<a href="category-01.php"><?php echo "$title_cat ";?></a>
 					</li>
-
-					<li>
+<?php }?>
+					<!-- <li>
 						<a href="category-01.php">مقالات قانونية </a>
 					</li>
 
@@ -157,7 +172,7 @@
 
 					<li>
 						<a href="category-01.php">صوت و صورة </a>
-					</li>
+					</li> -->
 
 					<li>
 						<a href="#">Features</a>
