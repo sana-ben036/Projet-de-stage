@@ -1,30 +1,4 @@
-<?php require'action.php'; 
-
-// script get post by category from db :::::::::::::::::::::::::::::::::::::
-
-$id=$_GET['id'];
-if($id == 'فضاء التشريع')
-{
- $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'فضاء التشريع' ORDER BY date_post DESC";
-}
-elseif($id == 'مقالات قانونية')
-{
- $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'مقالات قانونية' ORDER BY date_post DESC";
-}
-elseif($id == 'إجتهاد قضائي')
-{
- $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'إجتهاد قضائي' ORDER BY date_post DESC";
-}
-elseif($id == 'أنشطة علمية')
-{
- $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'أنشطة علمية' ORDER BY date_post DESC";
-}
-else{
- $query= "SELECT * FROM post ORDER BY date_post DESC";
-}
-
-
-?>
+<?php require'action.php'; ?>
 
 
 <!DOCTYPE html>
@@ -257,9 +231,7 @@ else{
 
 				<span class="breadcrumb-item f1-s-2 cl9">
 					<!-- print name of category  -->
-					<?php
-					echo $id;
-					?>
+					<?= $category;?>
 				</span>
 				<a href="index.php" class="breadcrumb-item f1-s-2 cl9">
 					الرئيسية 
@@ -293,39 +265,31 @@ else{
 				<div class="col-md-10 col-lg-8 p-b-80">
 					<div class="row">
 					<!------------php --------------------->
-					<?php
-					$sth= $mag->query($query);
-					while ($row = $sth->fetch()){
-					?>
+					
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 						<!-- Item latest -->
 							<div class="m-b-45">
-								<a href="blog-detail-01.php?id=<?= $row['id_post'];?>" class="wrap-pic-w hov1 trans-03">
-									<img src="<?= $row['img_post'];?>" alt="IMG">
+								<a href="blog-detail-01.php?id=<?= $id;?>" class="wrap-pic-w hov1 trans-03">
+									<img src="<?= $image;?>" alt="IMG">
 								</a>
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="blog-detail-01.php?id=<?= $row['id_post'];?>" class="f1-m-3 cl2 hov-cl10 trans-03"><?= $row['title_post'];?></a>
+										<a href="blog-detail-01.php?id=<?= $id;?>" class="f1-m-3 cl2 hov-cl10 trans-03"><?= $title;?></a>
 									</h5>
 									<span class="cl8">
 									<span class="f1-s-3">
-											<?= $row['name_cat'];?>
+											<?= $category;?>
 										</span>
 										<span class="f1-s-3">
 											-
 										</span>
 										<span class="f1-s-3">
-											<?= $row['date_post'];?>
+											<?= $date;?>
 										</span>
 									</span>
 								</div>
 							</div>
-						</div>
-					<?php 
-
-					}
-
-                    ?> 
+						</div> 
                     <!--------php --------------------->
 						
 					</div>

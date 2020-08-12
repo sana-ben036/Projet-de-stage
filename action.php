@@ -124,8 +124,59 @@ if (isset($_POST['send'])) {
 
 
 
+// script get post by id category or id post from db :::::::::::::::::::::::::::::::::::::
 
 
+if(isset($_GET['id'])){
+
+    $id=$_GET['id'];
+    if($id == 'فضاء التشريع')
+    {
+        $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'فضاء التشريع' ORDER BY date_post DESC";
+    }
+    elseif($id == 'مقالات قانونية')
+    {
+     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'مقالات قانونية' ORDER BY date_post DESC";
+    }
+    elseif($id == 'إجتهاد قضائي')
+    {
+     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'إجتهاد قضائي' ORDER BY date_post DESC";
+    }
+    elseif($id == 'أنشطة علمية')
+    {
+     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'أنشطة علمية' ORDER BY date_post DESC";
+    }
+    else{
+     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE id_post = :id";
+    }
+
+    $sth= $mag->prepare($query);
+    $sth->bindParam(':id',$id);
+    $sth->execute();
+    while ($row = $sth->fetch())
+    {
+        $id=$row['id_post'];
+        $title=$row['title_post'];
+        $category=$row['name_cat'];
+        $author=$row['author_post'];
+        $image=$row['img_post'];
+        $date=$row['date_post'];
+    
+    
+        
+    }
+	
+
+}
+
+
+
+
+
+
+
+
+    
 
     
     
