@@ -5,7 +5,7 @@
 <html lang="ar">
 
 <head>
-	<title>Category Page v1</title>
+	<title>category list</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -132,19 +132,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">فضاء التشريع </a>
+					<a href="blog-list-01.php?cat=فضاء التشريع">
+					    	فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">مقالات قانونية </a>
+						<a href="blog-list-01.php?cat=مقالات قانونية">
+							مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">إجتهاد قضائي </a>
+						<a hhref="blog-list-01.php?cat=إجتهاد قضائي">
+							إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">أنشطة علمية </a>
+						<a href="blog-list-01.php?cat=أنشطة علمية">
+							أنشطة علمية </a>
 					</li>
 
 					<li>
@@ -181,35 +185,43 @@
 								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=فضاء التشريع">
+								<a href="blog-list-01.php?cat=فضاء التشريع">
 									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">قوانين </a></li>
-									<li><a href="category-01.php">مشاريع القوانين </a></li>
-									<li><a href="category-01.php">إتفاقيات </a></li>
+									<li><a href="category-01.php?sub=قوانين">
+									قوانين </a></li>
+									<li><a href="category-01.php?sub=مشاريع القوانين">
+									مشاريع القوانين </a></li>
+									<li><a href="category-01.php?sub=إتفاقيات">
+									إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=مقالات قانونية">
+								<a href="blog-list-01.php?cat=مقالات قانونية">
 									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">دراسات  </a></li>
-									<li><a href="category-01.php">وجهة نظر  </a></li>
-									<li><a href="category-01.php">تعليق على قرار  </a></li>
+									<li><a href="category-01.php?sub=دراسات">
+									دراسات  </a></li>
+									<li><a href="category-01.php?sub=وجهة نظر">
+									وجهة نظر  </a></li>
+									<li><a href="category-01.php?sub=تعليق على قرار">
+									تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=إجتهاد قضائي">
+								<a href="blog-list-01.php?cat=إجتهاد قضائي">
 									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=أنشطة علمية">
+								<a href="blog-list-01.php?cat=أنشطة علمية">
 									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">فعاليات  </a></li>
-									<li><a href="category-01.php">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php?sub=فعاليات">
+									فعاليات  </a></li>
+									<li><a href="category-01.php?sub=تقارير">
+									تقارير </a></li>
 									
 								</ul>
 							</li>
@@ -231,7 +243,7 @@
 
 				<span class="breadcrumb-item f1-s-2 cl9">
 					<!-- print name of category  -->
-					<?= $category;?>
+					<?= $cat;?>
 				</span>
 				<a href="index.php" class="breadcrumb-item f1-s-2 cl9">
 					الرئيسية 
@@ -264,9 +276,22 @@
 			<div class="row justify-content-center">
 				<div class="col-md-10 col-lg-8 p-b-80">
 					<div class="row">
-					<!------------php --------------------->
-					
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+				<!------------php --------------------->
+				<?php
+				$sth= $mag->prepare($query);
+				$sth->bindParam(':cat',$cat);
+				$sth->execute();
+				while ($row = $sth->fetch())
+				{
+					$id=$row['id_post'];
+					$title=$row['title_post'];
+					$categories=$row['name_cat'];
+					$author=$row['author_post'];
+					$text=$row['text_post'];
+					$image=$row['img_post'];
+					$date=$row['date_post'];
+					?>
+					<div class="col-sm-6 p-r-25 p-r-15-sr991">
 						<!-- Item latest -->
 							<div class="m-b-45">
 								<a href="blog-detail-01.php?id=<?= $id;?>" class="wrap-pic-w hov1 trans-03">
@@ -278,7 +303,7 @@
 									</h5>
 									<span class="cl8">
 									<span class="f1-s-3">
-											<?= $category;?>
+											<?= $categories;?>
 										</span>
 										<span class="f1-s-3">
 											-
@@ -290,7 +315,12 @@
 								</div>
 							</div>
 						</div> 
-                    <!--------php --------------------->
+
+					<?php
+				}
+
+				?>
+                <!--------php --------------------->
 						
 					</div>
 

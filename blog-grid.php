@@ -91,7 +91,7 @@
 
 					<li class="left-topbar">
 
-						<a href="#" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
 						<a href="contact.php" class="left-topbar-item">
@@ -127,19 +127,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">فضاء التشريع </a>
+					<a href="blog-list-01.php?id=فضاء التشريع">
+					    	فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">مقالات قانونية </a>
+						<a href="blog-list-01.php?id=مقالات قانونية">
+							مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">إجتهاد قضائي </a>
+						<a hhref="blog-list-01.php?id=إجتهاد قضائي">
+							إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">أنشطة علمية </a>
+						<a href="blog-list-01.php?id=أنشطة علمية">
+							أنشطة علمية </a>
 					</li>
 
 					<li>
@@ -176,31 +180,43 @@
 								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.php">فضاء التشريع </a>
+								<a href="blog-list-01.php?id=فضاء التشريع">
+									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">قوانين </a></li>
-									<li><a href="category-01.php">مشاريع القوانين </a></li>
-									<li><a href="category-01.php">إتفاقيات </a></li>
+									<li><a href="category-01.php?id=قوانين">
+									قوانين </a></li>
+									<li><a href="category-01.php?id=مشاريع القوانين">
+									مشاريع القوانين </a></li>
+									<li><a href="category-01.php?id=إتفاقيات">
+									إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php">مقالات قانونية  </a>
+								<a href="blog-list-01.php?id=مقالات قانونية">
+									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">دراسات  </a></li>
-									<li><a href="category-01.php">وجهة نظر  </a></li>
-									<li><a href="category-01.php">تعليق على قرار  </a></li>
+									<li><a href="category-01.php?id=دراسات">
+									دراسات  </a></li>
+									<li><a href="category-01.php?id=وجهة نظر">
+									وجهة نظر  </a></li>
+									<li><a href="category-01.php?id=تعليق على قرار">
+									تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php">إجتهاد قضائي  </a>
+								<a href="blog-list-01.php?id=إجتهاد قضائي">
+									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.php">أنشطة علمية  </a>
+								<a href="blog-list-01.php?id=أنشطة علمية">
+									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">فعاليات  </a></li>
-									<li><a href="category-01.php">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php?id=فعاليات">
+									فعاليات  </a></li>
+									<li><a href="category-01.php?id=تقارير">
+									تقارير </a></li>
 									
 								</ul>
 							</li>

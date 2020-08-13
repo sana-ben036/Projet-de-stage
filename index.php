@@ -129,19 +129,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">فضاء التشريع </a>
+					<a href="blog-list-01.php?cat=فضاء التشريع">
+					    	فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">مقالات قانونية </a>
+						<a href="blog-list-01.php?cat=مقالات قانونية">
+							مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">إجتهاد قضائي </a>
+						<a hhref="blog-list-01.php?cat=إجتهاد قضائي">
+							إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">أنشطة علمية </a>
+						<a href="blog-list-01.php?cat=أنشطة علمية">
+							أنشطة علمية </a>
 					</li>
 
 					<li>
@@ -178,35 +182,43 @@
 								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=فضاء التشريع">
+								<a href="blog-list-01.php?cat=فضاء التشريع">
 									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">قوانين </a></li>
-									<li><a href="category-01.php">مشاريع القوانين </a></li>
-									<li><a href="category-01.php">إتفاقيات </a></li>
+									<li><a href="category-01.php?sub=قوانين">
+									قوانين </a></li>
+									<li><a href="category-01.php?sub=مشاريع القوانين">
+									مشاريع القوانين </a></li>
+									<li><a href="category-01.php?sub=إتفاقيات">
+									إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=مقالات قانونية">
+								<a href="blog-list-01.php?cat=مقالات قانونية">
 									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">دراسات  </a></li>
-									<li><a href="category-01.php">وجهة نظر  </a></li>
-									<li><a href="category-01.php">تعليق على قرار  </a></li>
+									<li><a href="category-01.php?sub=دراسات">
+									دراسات  </a></li>
+									<li><a href="category-01.php?sub=وجهة نظر">
+									وجهة نظر  </a></li>
+									<li><a href="category-01.php?sub=تعليق على قرار">
+									تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=إجتهاد قضائي">
+								<a href="blog-list-01.php?cat=إجتهاد قضائي">
 									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=أنشطة علمية">
+								<a href="blog-list-01.php?cat=أنشطة علمية">
 									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">فعاليات  </a></li>
-									<li><a href="category-01.php">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php?sub=فعاليات">
+									فعاليات  </a></li>
+									<li><a href="category-01.php?sub=تقارير">
+									تقارير </a></li>
 									
 								</ul>
 							</li>

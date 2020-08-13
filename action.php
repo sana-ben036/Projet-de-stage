@@ -91,7 +91,7 @@ if (isset($_POST['send'])) {
     $id=" ";
     $title=" ";
     $text=" ";
-    $category=" ";
+    $categories=" ";
     $image=" ";
     
     
@@ -100,7 +100,7 @@ if (isset($_POST['send'])) {
         //test values on input
         $title =valid_data ($_POST['title']);
         $text= valid_data($_POST['text']);
-        $category = valid_data($_POST['cat']);
+        $categories = valid_data($_POST['cat']);
         $image= $_FILES['image']['name'];
         $upload="images/".$image;
     
@@ -111,64 +111,86 @@ if (isset($_POST['send'])) {
         $sth->bindParam(':title',$title);
         $sth->bindParam(':text',$text);
         $sth->bindParam(':image',$upload);
-        $sth->bindParam(':cat',$category);
+        $sth->bindParam(':cat',$categories);
         $sth->execute();
         move_uploaded_file($_FILES['image']['tmp_name'],$upload);
+        $_SESSION['message']= " تم حفظ المقال ";
+        $_SESSION['msg_type']= "success";
     
         //header('Location : dashboard.php');
     
-        $_SESSION['message']= " تم حفظ المقال ";
-        $_SESSION['msg_type']= "success";
     
     } 
 
 
 
-// script get post by id category or id post from db :::::::::::::::::::::::::::::::::::::
+// script select posts by category :::::::::::::::::::::::::::::::::::::
 
 
-if(isset($_GET['id'])){
 
-    $id=$_GET['id'];
-    if($id == 'فضاء التشريع')
+
+if(isset($_GET['cat'])){
+
+    $cat=$_GET['cat'];
+    if($cat == 'فضاء التشريع')
     {
-        $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'فضاء التشريع' ORDER BY date_post DESC";
+        $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_parent = 2 ORDER BY date_post DESC";
     }
-    elseif($id == 'مقالات قانونية')
+    elseif($cat == 'مقالات قانونية')
     {
-     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'مقالات قانونية' ORDER BY date_post DESC";
+     $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_parent = 1 ORDER BY date_post DESC";
     }
-    elseif($id == 'إجتهاد قضائي')
+    elseif($cat == 'إجتهاد قضائي')
     {
-     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'إجتهاد قضائي' ORDER BY date_post DESC";
+     $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE name_cat = 'إجتهاد قضائي' ORDER BY date_post DESC";
     }
-    elseif($id == 'أنشطة علمية')
+    elseif($cat == 'أنشطة علمية')
     {
-     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE name_cat = 'أنشطة علمية' ORDER BY date_post DESC";
+     $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_parent = 4 ORDER BY date_post DESC";
     }
     else{
-     $query= "SELECT * FROM post INNER JOIN category ON post.id_cat = category.id_cat WHERE id_post = :id";
+     $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_post = :cat";
     }
+  
 
-    $sth= $mag->prepare($query);
-    $sth->bindParam(':id',$id);
-    $sth->execute();
-    while ($row = $sth->fetch())
-    {
-        $id=$row['id_post'];
-        $title=$row['title_post'];
-        $category=$row['name_cat'];
-        $author=$row['author_post'];
-        $image=$row['img_post'];
-        $date=$row['date_post'];
-    
-    
-        
-    }
 	
 
 }
 
+// script select posts by subCategory :::::::::::::::::::::::::::::::::::::
+
+
+if(isset($_GET['sub'])){
+
+    $sub=$_GET['sub'];
+    
+    $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE name_cat = '$sub'  ORDER BY date_post DESC";
+ 
+}
+
+
+
+// script for viewpost :::::::::::::::::::::::::::::::::::::
+
+
+if(isset($_GET['id'])){
+
+	$id=$_GET['id'];
+	$sth= $mag->prepare("SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_post = :id");
+	$sth->bindParam(':id',$id);
+	$sth->execute();
+	while ($row = $sth->fetch())
+		{
+					$id=$row['id_post'];
+					$title=$row['title_post'];
+					$categories=$row['name_cat'];
+					$author=$row['author_post'];
+					$text=$row['text_post'];
+					$image=$row['img_post'];
+					$date=$row['date_post'];
+
+        }
+}
 
 
 

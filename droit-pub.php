@@ -37,14 +37,14 @@
 				<div class="content-topbar container h-100">
 					<div class="left-topbar">
 						
-						<a href="login.html" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
 						
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 
@@ -78,7 +78,7 @@
 
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="images/logof.png" alt="IMG-LOGO"></a>
+					<a href="index.php"><img src="images/logof.png" alt="IMG-LOGO"></a>
 				</div>
 	
 			</div>
@@ -90,13 +90,13 @@
 
 					<li class="left-topbar">
 
-						<a href="login.html" class="left-topbar-item">
+						<a href="login.php" class="left-topbar-item">
 							الدخول
 						</a>
-						<a href="contact.html" class="left-topbar-item">
+						<a href="contact.php" class="left-topbar-item">
 							إتصل بنا
 						</a>
-						<a href="droit-pub.html" class="left-topbar-item">
+						<a href="droit-pub.php" class="left-topbar-item">
 							سياسة النشر 
 						</a>
 					</li>
@@ -118,7 +118,7 @@
 
 				<ul class="main-menu-m">
 					<li>
-						<a href="index.html">الرئيسية </a>
+						<a href="index.php">الرئيسية </a>
 
 						<span class="arrow-main-menu-m">
 							<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -126,23 +126,27 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">فضاء التشريع </a>
+					<a href="blog-list-01.php?cat=فضاء التشريع">
+					    	فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">مقالات قانونية </a>
+						<a href="blog-list-01.php?cat=مقالات قانونية">
+							مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">الإجتهاد القضائي </a>
+						<a hhref="blog-list-01.php?cat=إجتهاد قضائي">
+							إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.html">أنشطة علمية </a>
+						<a href="blog-list-01.php?cat=أنشطة علمية">
+							أنشطة علمية </a>
 					</li>
 
 					<li>
-						<a href="blog-grid.html">صوت و صورة </a>
+						<a href="blog-grid.php">صوت و صورة </a>
 					</li>
 
 				</ul>
@@ -152,7 +156,7 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="index.html"><img src="images/logof.png" alt="LOGO"></a>
+					<a href="index.php"><img src="images/logo.jpg" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
@@ -166,45 +170,57 @@
 				<div class="main-nav">
 					<!-- Menu desktop -->
 					<nav class="menu-desktop">
-						<a class="logo-stick" href="index.html">
+						<a class="logo-stick" href="index.php">
 							<img src="images/logof.png" alt="LOGO">
 						</a>
 
 						<ul class="main-menu">
 							<li class="main-menu-active">
-								<a href="index.html">الرئيسية </a>
+								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">فضاء التشريع </a>
+								<a href="blog-list-01.php?cat=فضاء التشريع">
+									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">قوانين </a></li>
-									<li><a href="category-01.html">مشاريع القوانين </a></li>
-									<li><a href="category-01.html">إتفاقيات </a></li>
+									<li><a href="category-01.php?sub=قوانين">
+									قوانين </a></li>
+									<li><a href="category-01.php?sub=مشاريع القوانين">
+									مشاريع القوانين </a></li>
+									<li><a href="category-01.php?sub=إتفاقيات">
+									إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">مقالات قانونية  </a>
+								<a href="blog-list-01.php?cat=مقالات قانونية">
+									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">دراسات  </a></li>
-									<li><a href="category-01.html">وجهة نظر  </a></li>
-									<li><a href="category-01.html">تعليق على قرار  </a></li>
+									<li><a href="category-01.php?sub=دراسات">
+									دراسات  </a></li>
+									<li><a href="category-01.php?sub=وجهة نظر">
+									وجهة نظر  </a></li>
+									<li><a href="category-01.php?sub=تعليق على قرار">
+									تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.html">الإجتهاد القضائي  </a>
+								<a href="blog-list-01.php?cat=إجتهاد قضائي">
+									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.html">أنشطة علمية  </a>
+								<a href="blog-list-01.php?cat=أنشطة علمية">
+									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.html">فعاليات  </a></li>
-									<li><a href="category-01.html">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php?sub=فعاليات">
+									فعاليات  </a></li>
+									<li><a href="category-01.php?sub=تقارير">
+									تقارير </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-grid.html">صوت و صورة  </a>
+								<a href="blog-grid.php">صوت و صورة  </a>
 							</li>
 
 						</ul>
@@ -212,7 +228,7 @@
 				</div>
 			</div>	
 		</div>
-    </header>
+	</header>
 
     <!-- Breadcrumb -->
 	<div class="container">

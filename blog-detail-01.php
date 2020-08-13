@@ -1,11 +1,4 @@
 <?php require'action.php';
-
-
-
-
-
-
-
 ?>
 
 
@@ -139,19 +132,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">فضاء التشريع </a>
+					<a href="blog-list-01.php?cat=فضاء التشريع">
+					    	فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">مقالات قانونية </a>
+						<a href="blog-list-01.php?cat=مقالات قانونية">
+							مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">إجتهاد قضائي </a>
+						<a hhref="blog-list-01.php?cat=إجتهاد قضائي">
+							إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">أنشطة علمية </a>
+						<a href="blog-list-01.php?cat=أنشطة علمية">
+							أنشطة علمية </a>
 					</li>
 
 					<li>
@@ -188,35 +185,43 @@
 								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=فضاء التشريع">
+								<a href="blog-list-01.php?cat=فضاء التشريع">
 									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">قوانين </a></li>
-									<li><a href="category-01.php">مشاريع القوانين </a></li>
-									<li><a href="category-01.php">إتفاقيات </a></li>
+									<li><a href="category-01.php?sub=قوانين">
+									قوانين </a></li>
+									<li><a href="category-01.php?sub=مشاريع القوانين">
+									مشاريع القوانين </a></li>
+									<li><a href="category-01.php?sub=إتفاقيات">
+									إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=مقالات قانونية">
+								<a href="blog-list-01.php?cat=مقالات قانونية">
 									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">دراسات  </a></li>
-									<li><a href="category-01.php">وجهة نظر  </a></li>
-									<li><a href="category-01.php">تعليق على قرار  </a></li>
+									<li><a href="category-01.php?sub=دراسات">
+									دراسات  </a></li>
+									<li><a href="category-01.php?sub=وجهة نظر">
+									وجهة نظر  </a></li>
+									<li><a href="category-01.php?sub=تعليق على قرار">
+									تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=إجتهاد قضائي">
+								<a href="blog-list-01.php?cat=إجتهاد قضائي">
 									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=أنشطة علمية">
+								<a href="blog-list-01.php?cat=أنشطة علمية">
 									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">فعاليات  </a></li>
-									<li><a href="category-01.php">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php?sub=فعاليات">
+									فعاليات  </a></li>
+									<li><a href="category-01.php?sub=تقارير">
+									تقارير </a></li>
 									
 								</ul>
 							</li>
@@ -239,8 +244,8 @@
 				<?= $title;?>
 							
 				</span>
-				<a href="category-01.php" class="breadcrumb-item f1-s-2 cl9">
-				<?= $subcategory;?> 
+				<a href="category-01.php?sub=<?= $categories;?>" class="breadcrumb-item f1-s-2 cl9">
+				<?= $categories;?> 
 				</a>
 				
 		
@@ -259,10 +264,10 @@
 	<section class="bg0 p-b-140 p-t-10">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-10 col-lg-8 p-b-30">
+				<div class=" col-md-10 col-lg-8 p-b-30">
 					<div class="p-r-10 p-r-0-sr991">
 						<!-- Blog Detail -->
-						<div class="p-b-70">
+						<div  class="p-b-70">
 
 							<h3 class="f1-m-3 cl2 p-b-16 p-t-33 respon2">
 							<?= $title;?>
@@ -285,14 +290,11 @@
 							<h3 class="f1-m-3 cl18 p-b-16 p-t-33 respon2">
 							<?= $author;?>
 							</h3>
+                            
+							<pre  class="f1-m-4 cl6 p-b-25 ">
+								<?= $text;?>
+                            </pre>
 
-							<p class="f1-m-4 cl6 p-b-25">
-							<?= $text;?>
-								
-                                
-							</p>
-
-							
 							<!-- Tag -->
 							<div class="flex-s-s p-t-12 p-b-15">
 								<span class="f1-s-2 cl5 m-r-8">

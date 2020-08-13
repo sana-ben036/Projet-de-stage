@@ -1,15 +1,33 @@
-<?php require'action.php';?>
+<?php require'action.php'; 
+
+/*
+<?php
+$sth= $mag->query('SELECT * FROM category');
+    while ($row = $sth->fetch()){
+    ?>
+        <option value=" <?= $row['id_cat'];?>"><?= $row['name_cat'];?></option>
+    <?php 
+
+    }    
+?>
+
+
+*/
+
+?>
 
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap-rtl.min.css">
+    
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -66,7 +84,7 @@
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                         <b><?= $_SESSION['message'] ; ?></b>
                     </div>
-                <?php } unset($_SESSION['message']) ; ?>
+                <?php  } unset($_SESSION['message']) ; ?>
                 <!-----------php---------------------->
 
                 <form action="" method='POST' enctype="multipart/form-data">
@@ -78,19 +96,36 @@
                     <label for="text">نص المقالة:</label>
                     <!---<textarea name="text" id="text" cols="100" rows="10" value='<?= $text; ?>' required></textarea><br><br>--->
                     <input class='input2' type="text" name='text' id='text' value='<?= $text; ?>' required><br>
-                    <label for="cat">التصنيف:</label>
+                    <label for="cat">التصنيف :</label>
                     <select name="cat" id="cat">
+                    <option value=" ">-- اختر احدى التصنيفات --</option>
                     <!--------php --------------------->
-                    <?php 
-                        // get category from db
-                        $sth= $mag->query('SELECT * FROM category');
-                            while ($row = $sth->fetch()){
-                            ?>
-                                <option value=" <?= $row['id_cat'];?>"><?= $row['name_cat'];?></option>
-                            <?php 
-
-                            }  
-                    ?> 
+                    
+                    <?php  
+                    $mag = new mysqli('localhost','root','','mag');
+                    $mag->query("SET NAMES utf8");
+                    $mag->query("SET CHARACTER SET utf8");
+                    if($mag->connect_error){
+                        die("connection failed:".$mag->connect_error);
+                    }
+                    
+                    // get category from db
+                    function categoryTree($id_parent= 0,$sub_mark =''){
+                        global $mag;
+                        $query = $mag->query("SELECT * FROM categories  WHERE id_parent = $id_parent ORDER BY name_cat DESC "  );
+                        
+                        if ($query->num_rows > 0){
+                            while ($row = $query-> fetch_assoc()){
+                                
+                                echo '<option value="'.$row['id_cat'].'">'.$sub_mark.$row['name_cat'].'</option>';
+                            
+                                categoryTree($row['id_cat'],$sub_mark.'---');
+                            }
+                        
+                        }
+                    }
+                    echo categoryTree();
+                    ?>
                     <!--------php --------------------->
                     </select><br>
                     <label for="image">الصورة:</label>

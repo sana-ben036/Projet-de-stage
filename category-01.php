@@ -1,38 +1,44 @@
-<?php require'action.php'; ?>
+<?php require'action.php'; 
+
+
+
+?>
 
 
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
-	<title>عرض الكل </title>
+	<title>category list</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/justice.png"/>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/justice.png" />
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap-rtl.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.min.css">
-<!--===============================================================================================-->	
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 </head>
+
 <body class="animsition">
-	
+
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -130,19 +136,23 @@
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">فضاء التشريع </a>
+					<a href="blog-list-01.php?cat=فضاء التشريع">
+					    	فضاء التشريع </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">مقالات قانونية </a>
+						<a href="blog-list-01.php?cat=مقالات قانونية">
+							مقالات قانونية </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">إجتهاد قضائي </a>
+						<a hhref="blog-list-01.php?cat=إجتهاد قضائي">
+							إجتهاد قضائي </a>
 					</li>
 
 					<li>
-						<a href="blog-list-01.php">أنشطة علمية </a>
+						<a href="blog-list-01.php?cat=أنشطة علمية">
+							أنشطة علمية </a>
 					</li>
 
 					<li>
@@ -179,35 +189,43 @@
 								<a href="index.php">الرئيسية </a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=فضاء التشريع">
+								<a href="blog-list-01.php?cat=فضاء التشريع">
 									فضاء التشريع </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">قوانين </a></li>
-									<li><a href="category-01.php">مشاريع القوانين </a></li>
-									<li><a href="category-01.php">إتفاقيات </a></li>
+									<li><a href="category-01.php?sub=قوانين">
+									قوانين </a></li>
+									<li><a href="category-01.php?sub=مشاريع القوانين">
+									مشاريع القوانين </a></li>
+									<li><a href="category-01.php?sub=إتفاقيات">
+									إتفاقيات </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=مقالات قانونية">
+								<a href="blog-list-01.php?cat=مقالات قانونية">
 									مقالات قانونية </a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">دراسات  </a></li>
-									<li><a href="category-01.php">وجهة نظر  </a></li>
-									<li><a href="category-01.php">تعليق على قرار  </a></li>
+									<li><a href="category-01.php?sub=دراسات">
+									دراسات  </a></li>
+									<li><a href="category-01.php?sub=وجهة نظر">
+									وجهة نظر  </a></li>
+									<li><a href="category-01.php?sub=تعليق على قرار">
+									تعليق على قرار  </a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=إجتهاد قضائي">
+								<a href="blog-list-01.php?cat=إجتهاد قضائي">
 									إجتهاد قضائي</a>
 							</li>
 							<li>
-								<a href="blog-list-01.php?id=أنشطة علمية">
+								<a href="blog-list-01.php?cat=أنشطة علمية">
 									أنشطة علمية</a>
 								<ul class="sub-menu">
-									<li><a href="category-01.php">فعاليات  </a></li>
-									<li><a href="category-01.php">تقارير و تغطية  </a></li>
+									<li><a href="category-01.php?sub=فعاليات">
+									فعاليات  </a></li>
+									<li><a href="category-01.php?sub=تقارير">
+									تقارير </a></li>
 									
 								</ul>
 							</li>
@@ -226,15 +244,15 @@
 	<div class="container">
 		<div class="bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
-				
-				<span class="breadcrumb-item f1-s-2 cl9">
-		        	قوانين  
-				</span>
-				<a href="blog-list-01.php" class="breadcrumb-item f1-s-2 cl9">
-					فضاء التشريع 
-				</a>
 
-				
+				<span class="breadcrumb-item f1-s-2 cl9">
+					<!-- print name of category  -->
+					<?= $sub;?>
+				</span>
+				<a href="blog-list-01.php?cat=<?= $row['id_parent'];?> " class="breadcrumb-item f1-s-2 cl9">
+				<?= $row['id_parent'];?>
+				</a>
+					
 			</div>
 
 			<div class="pos-relative size-a-2 bo-1-rad-22 of-hidden bocl11 m-tb-6">
@@ -247,56 +265,79 @@
 	</div>
 
 	<!-- Page heading -->
+	<div class="container p-t-4 p-b-40">
+		<h2 class="f1-m-2 cl2">
+		عرض الكل 
+		</h2>
+	</div>
+
+	<!-- Feature post -->
 	
 
 	<!-- Post -->
-	<section class="bg0 p-b-55">
+	<section class="bg0 p-t-70 p-b-55">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-10 col-lg-8 p-b-80">
-					<div class="p-r-10 p-r-0-sr991">
-						<div class="m-t--40 p-b-40">
-							<!-- Item post -->
-							<div class="flex-wr-sb-s p-t-40 p-b-15 how-bor2">
-								<a href="blog-detail-01.php" class="size-w-8 wrap-pic-w hov1 trans-03 w-full-sr575 m-b-25">
-									<img src="images/post-43.jpg" alt="IMG">
+					<div class="row">
+				<!------------php --------------------->
+					<?php 
+					$sth= $mag->prepare($query);
+					$sth->bindParam(':sub',$sub);
+					$sth->execute();
+					while ($row = $sth->fetch())
+					{
+						$id=$row['id_post'];
+                        $title=$row['title_post'];
+                        $category=$row['name_cat'];
+                        $author=$row['author_post'];
+                        $text=$row['text_post'];
+                        $image=$row['img_post'];
+                        $date=$row['date_post'];
+						?>
+						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+						<!-- Item latest -->
+							<div class="m-b-45">
+								<a href="blog-detail-01.php?id=<?= $id;?>" class="wrap-pic-w hov1 trans-03">
+									<img src="<?= $image;?>" alt="IMG">
 								</a>
-
-								<div class="size-w-9 w-full-sr575 m-b-25">
-									<h5 class="p-b-12">
-										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03 respon2">
-											القانون المتعلق بمهنة المحاماة
-
-										</a>
+								<div class="p-t-16">
+									<h5 class="p-b-5">
+										<a href="blog-detail-01.php?id=<?= $id;?>" class="f1-m-3 cl2 hov-cl10 trans-03"><?= $title;?></a>
 									</h5>
-
-									<div class="cl8 p-b-18">
-
-										<span class="f1-s-3">
-											12 فبراير 2020
+									<span class="cl8">
+									<span class="f1-s-3">
+											<?= $category;?>
 										</span>
-									</div>
-
-									<p class="f1-s-1 cl6 p-b-24">
-										القانون رقم 28.08 الصادر بتنفيده الظهير شريف رقم 1.08.101 الصادر في 20 من شوال 1429 موافق 20 أكتوبر 2008 المتعلق بمهنة المحاماة 
-									</p>
-
-									<a href="blog-detail-01.php" class="f1-s-1 cl9 hov-cl10 trans-03">
-										المزيد 
-										<i class="m-l-2 fa fa-long-arrow-alt-right"></i>
-									</a>
+										<span class="f1-s-3">
+											-
+										</span>
+										<span class="f1-s-3">
+											<?= $date;?>
+										</span>
+									</span>
 								</div>
 							</div>
-						</div>
+						</div> 
 
-						<a href="#" class="flex-c-c size-a-13 bo-all-1 bocl11 f1-m-6 cl6 hov-btn1 trans-03">
-							لتحميل المزيد 
-						</a>
+						<?php
+						
+						
+					}
+					?>	
+                <!--------php --------------------->
+						
+					</div>
+
+					<!-- Pagination -->
+					<div class="flex-wr-s-c m-rl--7 p-t-15">
+						<a href="#" class="flex-c-c pagi-item hov-btn1 trans-03 m-all-7 pagi-active">1</a>
+						<a href="#" class="flex-c-c pagi-item hov-btn1 trans-03 m-all-7">2</a>
 					</div>
 				</div>
 
 				<div class="col-md-10 col-lg-4 p-b-80">
-					<div class="p-l-10 p-rl-0-sr991">							
+					<div class="p-l-10 p-rl-0-sr991">
 						<!-- Subscribe -->
 						<div class="bg10 p-rl-35 p-t-28 p-b-35 m-b-55">
 							<h5 class="f1-m-5 cl0 p-b-10">
@@ -379,11 +420,11 @@
 
 						<!--  -->
 						<div class="flex-c-s p-b-50">
-							<a href="droit-pub.php">
+							<a href="#">
 								<img class="max-w-full" src="images/banner-02.jpg" alt="IMG">
 							</a>
 						</div>
-						
+
 						<!-- Tag -->
 						<div class="p-b-55">
 							<div class="how2 how2-cl4 flex-s-c m-b-30">
@@ -393,16 +434,17 @@
 							</div>
 
 							<div class="flex-wr-s-s m-rl--5">
+								
 								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
 									دراسات 
 								</a>
 
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+								<a   href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
 									تعليق على قرار
 								</a>
 
 								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									اراء
+									وجهة نظر
 								</a>
 
 								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
@@ -410,7 +452,7 @@
 								</a>
 
 								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									أحكام قضائية
+									إتفاقيات
 								</a>
 
 								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
@@ -556,7 +598,7 @@
 
 							<li class="how-bor1 p-rl-5 p-tb-10">
 								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									الإجتهاد القضائي (22)
+									إجتهاد قضائي (22)
 								</a>
 							</li>
 
@@ -598,15 +640,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 
 
-<!--===============================================================================================-->	
+	<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
 </body>
+
 </html>
