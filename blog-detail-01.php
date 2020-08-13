@@ -1,3 +1,4 @@
+
 <?php require('./include/header.php') ;?>
 	<!-- Breadcrumb -->
 	<div class="container">
@@ -6,13 +7,29 @@
 				<a href="index.php" class="breadcrumb-item f1-s-3 cl9">
 					الصفحة الرئيسية
 				</a>
-
+				<?php 
+				  
+					$query = "SELECT * FROM `posts` WHERE 1";
+					$query_post = mysqli_query($conn ,$query );
+					
+					
+					
+					while($row = mysqli_fetch_assoc( $query_post)){
+						$id_post = $row['id_post'];
+						$title_post = $row['title_post'];
+						$autor_post = $row['autor_post'];
+						$image_post = $row['image_post'];
+						$date_post = $row['date_post'];
+						$content_post = $row['content_post'];
+						$tag_post = $row['tag_post'];
+				?>
 				<a href="blog-list-01.php" class="breadcrumb-item f1-s-3 cl9">
 					المدونة 
 				</a>
+				
 
-				<span class="breadcrumb-item f1-s-3 cl9">
-					دورة تكوينية حول "التحكيم الداخلي والدولي في المنازعات التجارية" بمدينة الرباط يومي السبت والاحد 28 و 29 يوليوز 2020							</h3>
+				<h3><span class="breadcrumb-item f1-s-3 cl9">
+					<?php echo"$title_post";  ?>	</h3>
 							
 				</span>
 			</div>
@@ -39,18 +56,18 @@
 							</a>
 
 							<h3 class="f1-l-3 cl2 p-b-16 p-t-33 respon2">
-								دورة تكوينية حول "التحكيم الداخلي والدولي في المنازعات التجارية" بمدينة الرباط يومي السبت والاحد 28 و 29 يوليوز 2020							</h3>
+							<?php echo"$title_post";  ?>							</h3>
 							
 							<div class="flex-wr-s-s p-b-40">
 								<span class="f1-s-3 cl8 m-r-15">
 									<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-										الاستاد كريم
+									<?php echo"$autor_post";  ?>
 									</a>
 
 									<span class="m-rl-3">-</span>
 
 									<span>
-										يومي السبت والاحد 28-29 يوليوز 2020
+										<?php echo"$date_post";  ?>
 									</span>
 								</span>
 
@@ -58,13 +75,18 @@
 							</div>
 
 							<div class="wrap-pic-max-w p-b-30">
-								<img src="images/blog-list-01.jpg" alt="IMG">
+								<img src="images/<?php echo"$image_post";  ?>" alt="IMG">
 							</div>
 
 							<p class="f1-s-11 cl6 p-b-25">
 								<h1 class="f1-m-2 cl3 tab01-title">
+
+
+
+
+								<?php echo"$content_post";  ?>
 									
-								    *أهداف الدورة التكوينية:  
+								    <!-- *أهداف الدورة التكوينية:  
 								</h1>
 								 <h3>–  الإحاطة بالقواعد المؤطرة للمنازعات التجارية و تسويتها عن طريق التحكيم الداخلي و الدولي.</h3>
 								 <h3>–  الإحاطة بالضوابط القانونية و الاتفاقية لمهمة المحكم لحل المنازعات التجارية.</h3>
@@ -82,7 +104,7 @@
 								 <h3>–  الأحكام المؤطرة للمنازعات التجارية وتسويتها عن طريق التحكيم الداخلي و الدولي.</h3>
 								 <h3>–  الضوابط القانونية و الاتفاقية لمهمة المحكم في مسطرة التحكيم.</h3> 
 								 <h3>–  صلاحية قبول المحكم للمهمة المسندة إليه.</h3>
-                                
+                                 -->
 							</p>
 
 							
@@ -94,15 +116,18 @@
 								
 								<div class="flex-wr-s-s size-w-0">
 									<a href="#" class="f1-s-12 cl8 hov-link1 m-r-15">
-										دراسات
+								<?php echo"$tag_post";  ?>
 									</a>
 
-									<a href="#" class="f1-s-12 cl8 hov-link1 m-r-15">
+									<!-- <a href="#" class="f1-s-12 cl8 hov-link1 m-r-15">
 										أحكام قضائية
 
-									</a>
+									</a> -->
+
+									
 								</div>
 							</div>
+							<?php } ?>
 
 							<!-- Share -->
 							<div class="flex-s-s">
