@@ -148,10 +148,13 @@ if(isset($_GET['cat'])){
     {
      $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_parent = 4 ORDER BY date_post DESC";
     }
+    elseif($cat == 'صوت و صورة')
+    {
+     $query= "SELECT * FROM video ORDER BY date_video DESC";
+    }
     else{
      $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_post = :cat";
     }
-  
 
 	
 

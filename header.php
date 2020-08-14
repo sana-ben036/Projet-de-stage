@@ -188,7 +188,8 @@
 								</ul>
 							</li>
 							<li>
-								<a href="blog-grid.php">صوت و صورة  </a>
+								<a href="blog-grid.php?cat=صوت و صورة">
+									صوت و صورة  </a>
 							</li>
 
 						</ul>

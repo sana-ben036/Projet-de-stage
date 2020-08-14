@@ -49,122 +49,42 @@
 			<div class="row justify-content-center">
 				<div class="col-md-10 col-lg-8 p-b-80">
 					<div class="row">
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
+						<!------------php --------------------->
+						<?php
+						$sth= $mag->prepare($query);
+						$sth->bindParam(':cat',$cat);
+						$sth->execute();
+						while ($row = $sth->fetch())
+					    {
+							$id=$row['id_video'];
+							$title=$row['title_video'];
+							$url=$row['url_video'];
+							$date=$row['date_video'];
+							?>
+							<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<div  class="wrap-pic-w ">
-									<iframe  width="320" height="180" src="https://www.youtube.com/embed/tVTNaoYiQac" frameborder="0" allowfullscreen></iframe>	
+									<iframe  width="320" height="180" src="https://www.youtube.com/embed/<?= $url;?>" frameborder="0" allowfullscreen></iframe>	
 								</div>
-
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="https://youtu.be/tVTNaoYiQac" class="f1-m-3 cl2 hov-cl10 trans-03">
-											ضمانات الملزم بالضريبة من خلال إشكالات دعوى بطلان إجراءات التحصيل  
+										<a href="<?= $url;?>" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<?= $title;?>  
 										</a>
 									</h5>
-
 									<span class="cl8">
 										<span class="f1-s-3">
-											12 فبراير 2020
+										<?= $date;?>
 										</span>
 									</span>
 								</div>
 							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<div  class="wrap-pic-w ">
-									<iframe  width="320" height="180" src="https://www.youtube.com/embed/tVTNaoYiQac" frameborder="0" allowfullscreen></iframe>	
-								</div>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="https://youtu.be/tVTNaoYiQac" class="f1-m-3 cl2 hov-cl10 trans-03">
-											ضمانات الملزم بالضريبة من خلال إشكالات دعوى بطلان إجراءات التحصيل  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<div  class="wrap-pic-w ">
-									<iframe  width="320" height="180" src="https://www.youtube.com/embed/tVTNaoYiQac" frameborder="0" allowfullscreen></iframe>	
-								</div>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="https://youtu.be/tVTNaoYiQac" class="f1-m-3 cl2 hov-cl10 trans-03">
-											ضمانات الملزم بالضريبة من خلال إشكالات دعوى بطلان إجراءات التحصيل  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<div  class="wrap-pic-w ">
-									<iframe  width="320" height="180" src="https://www.youtube.com/embed/tVTNaoYiQac" frameborder="0" allowfullscreen></iframe>	
-								</div>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="https://youtu.be/tVTNaoYiQac" class="f1-m-3 cl2 hov-cl10 trans-03">
-											ضمانات الملزم بالضريبة من خلال إشكالات دعوى بطلان إجراءات التحصيل  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<div  class="wrap-pic-w ">
-									<iframe  width="320" height="180" src="https://www.youtube.com/embed/tVTNaoYiQac" frameborder="0" allowfullscreen></iframe>	
-								</div>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="https://youtu.be/tVTNaoYiQac" class="f1-m-3 cl2 hov-cl10 trans-03">
-											ضمانات الملزم بالضريبة من خلال إشكالات دعوى بطلان إجراءات التحصيل  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-	
+						    </div>
+					        <?php	
+				        }
+				        ?>
+						<!------------php --------------------->
 					</div>
 
 					<!-- Pagination -->
