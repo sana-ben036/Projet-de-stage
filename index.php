@@ -20,10 +20,19 @@
 				<span style="color:#17b978;"  class="text-uppercase cl2 p-r-8">
 					مستجدات : 
 				</span>
+
 				<span  class="dis-inline-block cl6 slide100-txt pos-relative size-w-0" data-in="fadeInDown" data-out="fadeOutDown" >
-					<!------------php --------------------->
-				
-					<!------------php --------------------->
+					<span style="width: 100%;" class="dis-inline-block slide100-txt-item animated visible-false">
+						انطلاق اولى فعاليا مؤتمر مراكش لمناقشة افاق الدراسة عن بعد
+					</span>
+					
+					<span  style="width: 100%;" class="dis-inline-block slide100-txt-item animated visible-false">
+						انطلاق ثاني فعاليا مؤتمر مراكش لمناقشة افاق الدراسة عن بعد
+					</span>
+
+					<span style="width: 100%;" class="dis-inline-block slide100-txt-item animated visible-false">
+						انطلاق ثالث فعاليا مؤتمر مراكش لمناقشة افاق الدراسة عن بعد
+					</span>
 				</span>
 			</div>
 
