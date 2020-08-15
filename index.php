@@ -22,6 +22,7 @@
 				</span>
 
 				<span  class="dis-inline-block cl6 slide100-txt pos-relative size-w-0" data-in="fadeInDown" data-out="fadeOutDown" >
+					
 					<span style="width: 100%;" class="dis-inline-block slide100-txt-item animated visible-false">
 						انطلاق اولى فعاليا مؤتمر مراكش لمناقشة افاق الدراسة عن بعد
 					</span>
@@ -972,6 +973,11 @@
 							<h5 class="f1-m-5 cl0 p-b-10">
 								للإشتراك في المجلة
 							</h5>
+							<!-----------php/ alert---------------->
+							<?php if(isset($_SESSION['message'])){ ;?>
+                                <p class=" f1-m-2 cl14 "><b><?= $_SESSION['message'] ; ?></b></p>
+                            <?php } unset($_SESSION['message']) ; ?>
+                            <!-----------php------------------------>
 
 							<p class="f1-m-1 cl0 p-b-25">
 								توصل بجديد المقالات و النصوص القانونية و الأنشطة العلمية المعلن عنها ، و ذلك من خلال إرسال التفاصيل إلى بريدكم الإلكتروني بشكل دوري 
@@ -1037,7 +1043,7 @@
 	</section>
 
 	<!-- Footer -->
-	<?php include'footer.php'; ?>
+	<?php include 'footer.php'; ?>
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">

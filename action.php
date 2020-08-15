@@ -197,7 +197,64 @@ if(isset($_GET['id'])){
 
 
 
+// script for subscribe  :::::::::::::::::::::::::::::::::::::
 
+
+    if(isset($_POST['subscribe'])){
+
+
+        $email = valid_data ($_POST['email']);   
+        $sth = $mag->prepare("INSERT INTO subscribe (email_visitor) VALUES(:email)");
+                $sth->bindParam(':email',$email);
+                $sth->execute();
+                    $_SESSION['message']= "** تم تفعيل إشتراككم **";
+        
+        
+        /*
+    
+        $sth = $mag->prepare("SELECT * FROM subscribe WHERE email_visitor = :email ");
+        $sth->bindParam(':email',$email);
+        $sth->execute();
+        while ($row = $sth->fetch())
+        {
+            
+
+            if ($row &&  ($_POST['email'] === $row['email_visitor']))
+            {
+                $_SESSION['message']= "!! لديكم اشتراك مسبقا !!";
+
+            } 
+            
+            else{
+
+                $sth = $mag->prepare("INSERT INTO subscribe (email_visitor) VALUES(:email)");
+                $sth->bindParam(':email',$email);
+                $sth->execute();
+                    $_SESSION['message']= " تم تفعيل اللإشتراك";
+
+                
+
+                
+
+            }
+        
+
+        }
+        */
+    }
+
+
+    
+
+
+
+// news ::::::::::::::::::::::::::
+$sth= $mag->query("SELECT * FROM post ");
+$sth->execute();
+while ($row = $sth->fetch())
+    {
+    $news= $row['title_post'] ;						
+    }
 
 
 
