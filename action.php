@@ -248,13 +248,6 @@ if(isset($_GET['id'])){
 
 
 
-// news ::::::::::::::::::::::::::
-$sth= $mag->query("SELECT * FROM post ");
-$sth->execute();
-while ($row = $sth->fetch())
-    {
-    $news= $row['title_post'] ;						
-    }
 
 
 

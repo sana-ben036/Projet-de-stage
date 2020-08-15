@@ -23,17 +23,22 @@
 
 				<span  class="dis-inline-block cl6 slide100-txt pos-relative size-w-0" data-in="fadeInDown" data-out="fadeOutDown" >
 					
-					<span style="width: 100%;" class="dis-inline-block slide100-txt-item animated visible-false">
-						انطلاق اولى فعاليا مؤتمر مراكش لمناقشة افاق الدراسة عن بعد
-					</span>
+					<?php
+					$sth= $mag->query("SELECT * FROM post ORDER BY id_post DESC lIMIT 0,5");
+					$sth->execute();
+					while ($row = $sth->fetch())
+						{
+						$news= $row['title_post'] ;
+						?>
+						<span style="width:100%;" class="dis-inline-block slide100-txt-item animated visible-false f1-s-1">
+							<?= $news ;?>	
+						</span>
+						<?php
 					
-					<span  style="width: 100%;" class="dis-inline-block slide100-txt-item animated visible-false">
-						انطلاق ثاني فعاليا مؤتمر مراكش لمناقشة افاق الدراسة عن بعد
-					</span>
+						}
 
-					<span style="width: 100%;" class="dis-inline-block slide100-txt-item animated visible-false">
-						انطلاق ثالث فعاليا مؤتمر مراكش لمناقشة افاق الدراسة عن بعد
-					</span>
+					?>
+					
 				</span>
 			</div>
 
