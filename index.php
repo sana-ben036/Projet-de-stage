@@ -983,17 +983,16 @@
                                 <p class=" f1-m-2 cl14 "><b><?= $_SESSION['message'] ; ?></b></p>
                             <?php } unset($_SESSION['message']) ; ?>
                             <!-----------php------------------------>
-
 							<p class="f1-m-1 cl0 p-b-25">
 								توصل بجديد المقالات و النصوص القانونية و الأنشطة العلمية المعلن عنها ، و ذلك من خلال إرسال التفاصيل إلى بريدكم الإلكتروني بشكل دوري 
 							</p>
+							
+							<form  class="size-a-9 pos-relative" action="" method="POST">
+								<input class="s-full f1-m-6 cl6 plh9 p-l-20 p-r-55" type="email" name="email" placeholder="البريد الإلكتروني" required>
 
-							<form  class="size-a-9 pos-relative">
-								<input class="s-full f1-m-6 cl6 plh9 p-l-20 p-r-55" type="text" name="email" placeholder="البريد الإلكتروني">
-
-                                <button class="size-a-10 flex-c-c ab-t-r fs-16 cl9 hov-cl10 trans-03">
+                                <button type="submit" name="subscribe" class="size-a-10 flex-c-c ab-t-r fs-16 cl9 hov-cl10 trans-03">
 									<i class="fa fa-arrow-right"></i>
-								</button>
+								</button>	
 							</form>
 						</div>
 						
