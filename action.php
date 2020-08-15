@@ -1,7 +1,7 @@
 <?php
 
 // conexion db 
-require 'connect.php';
+require './include/connect.php';
 
 // declarer session
 session_start();
@@ -30,6 +30,7 @@ function valid_data($data){
             $name=$row['name_admin'];
             $email=$row['email_admin'];
             $password=$row['password'];
+            $_SESSION['name_admin'] =$row['name_admin'];
 
             if ($row && ($_POST['password'] === $row['password']))
             {

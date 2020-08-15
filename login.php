@@ -8,7 +8,7 @@
 	<title>الدخول</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php include'link.php'; ?>
+	<?php include'./include/link.php'; ?>
 </head>
 <body class="animsition">
 	

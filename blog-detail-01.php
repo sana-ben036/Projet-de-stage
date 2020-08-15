@@ -1,4 +1,4 @@
-<?php require 'action.php';?>
+<?php require './include/action.php';?>
 
 
 <!DOCTYPE html>
@@ -7,12 +7,12 @@
 	<title>عرض المنشور </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php include 'link.php'; ?>
+	<?php include './include/link.php'; ?>
 </head>
 <body class="animsition">
 	
 	<!-- Header -->
-	<?php include 'header.php'; ?>
+	<?php include './include/header.php'; ?>
 
 	<!-- Breadcrumb -->
 	<div class="container">
@@ -415,25 +415,5 @@
 	</section>
 
 	<!-- Footer -->
-	<?php include'footer.php'; ?>
+	<?php include'./include/footer.php'; ?>
 
-	<!-- Back to top -->
-	<div class="btn-back-to-top" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<span class="fas fa-angle-up"></span>
-		</span>
-	</div>
-
-
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
-</body>
-</html>
