@@ -129,7 +129,6 @@
 							
 							<form  class="size-a-9 pos-relative" action="" method="POST">
 								<input class="s-full f1-m-6 cl6 plh9 p-l-20 p-r-55" type="email" name="email" placeholder="البريد الإلكتروني" required>
-
                                 <button type="submit" name="subscribe" class="size-a-10 flex-c-c ab-t-r fs-16 cl9 hov-cl10 trans-03">
 									<i class="fa fa-arrow-right"></i>
 								</button>	

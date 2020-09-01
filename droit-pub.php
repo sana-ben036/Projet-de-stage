@@ -1,24 +1,27 @@
+<?php require 'action.php'; ?>
+
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
 	<title>الرئيسية</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php include'link.php'; ?>
+	<?php include 'link.php'; ?>
 </head>
 <body class="animsition">
 	
 	<!-- Header -->
-	<?php include'header.php'; ?>
+	<?php include 'header.php'; ?>
 
     <!-- Breadcrumb -->
 	<div class="container">
 		<div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
-                <span class="breadcrumb-item f1-s-3 cl9">
+                <span class="breadcrumb-item f1-s-2 cl9">
 					سياسة النشر
 				</span>
-				<a href="index.html" class="breadcrumb-item f1-s-3 cl9">
+				<a href="index.html" class="breadcrumb-item f1-s-2 cl9">
 					الرئيسية 
 				</a>
 
@@ -56,7 +59,7 @@
                         <p class="f2-s-1 cl2"><i class="fas fa-check cl10"></i>  تفتح المجلة ابوابها للحوار الحر حول الموضوعات المنشورة، على أن تكون الردود والإجابات موضوعية وموثقة.</p>
                     </div><br>
                     <div>
-                        <a href="contact.html" class=" btn btn-dark  f1-m-5">تواصل معنا </a>
+                        <a href="contact.php" class=" btn btn-dark  f1-m-5">تواصل معنا </a>
                     </div><br>
                     <div>
                         <p class="f1-m-5 cl1 p-b-16">
@@ -72,7 +75,7 @@
 						<div>
 							<div class="how2 how2-cl4 flex-s-c">
 								<h3 class="f1-m-2 cl3 tab01-title">
-									 الأكثر متابعة
+								    الأكثر متابعة
 								</h3>
 							</div><br>
 
@@ -146,7 +149,7 @@
 
 
 <!-- Footer -->
-<?php include'footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">

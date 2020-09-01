@@ -188,8 +188,8 @@ if(isset($_GET['id'])){
 					$title=$row['title_post'];
 					$categories=$row['name_cat'];
 					$author=$row['author_post'];
-					$text=$row['text_post'];
-					$image=$row['img_post'];
+                    $text=$row['text_post'];
+                    $image=$row['img_post'];
 					$date=$row['date_post'];
 
         }
@@ -244,7 +244,32 @@ if(isset($_GET['id'])){
     }
 
 
+// script for search  :::::::::::::::::::::::::::::::::::::
+
+    if(isset($_POST['look-for'])){
+
+
+        $search = valid_data ($_POST['search']);   
+        $sth = $mag->prepare(" SELECT id_post FROM post WHERE title_post LIKE :search");
+                $sth->bindParam(':search',$search);
+                $sth->execute();
+                while ($row = $sth->fetch())
+        {
+            if($row){
+                header('Location:blog-detail-01.php/id=$row["id_post"]');
+                
+            }else{
+                $_SESSION['message']= "غير موجود";
+
+            }
+
+        }
+                
+        
+        
     
+    }
+ 
 
 
 

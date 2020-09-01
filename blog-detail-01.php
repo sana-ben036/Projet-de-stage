@@ -47,32 +47,38 @@
 						<!-- Blog Detail -->
 						<div  class="p-b-70">
 
-							<h3 class="f1-m-3 cl2 p-b-16 p-t-33 respon2">
-							<?= $title;?>
+							<div  class="f1-l-1 cl18 p-b-16 p-t-33 respon2">
+							<h3>
+							    <?= $title;?>
 							</h3>
 							
-							<div class="flex-wr-s-s p-b-40">
-								<span class="f1-s-3 cl8 m-r-15">
+							    
+							</div>
+							
+							<div  class="flex-wr-s-s p-b-40">
+								<span  class="f1-s-3 cl8 m-r-15">
 									<span>
 									<?= $date;?>
 									</span>
-								</span>
-
-								
+								</span>	
 							</div>
 
-							<div class="wrap-pic-max-w p-b-30">
-								<img src="<?= $image?>" alt="IMG">
-							</div>
-
-							<h3 class="f1-m-3 cl18 p-b-16 p-t-33 respon2">
-							<?= $author;?>
-							</h3>
+							<!--<div style="text-align:center;" class="wrap-pic-max-w p-b-30">
+								<img width="500" src="<?= $image?>" alt="IMG">
+							</div>-->
                             
-							<pre  class="f1-m-4 cl6 p-b-25 ">
-								<?= $text;?>
-                            </pre>
-
+							<div class="f1-m-3 cl2 p-b-16 p-t-33 respon2">
+							    <h3 >
+							        <?= $author;?>
+							    </h3>
+							</div>
+					
+							<div class="f1-m-4 cl6 p-b-25 ">
+							    <p>
+							        <?= $text;?>
+						     	</p>	
+                            </div>
+							
 							<!-- Tag -->
 							<div class="flex-s-s p-t-12 p-b-15">
 								<span class="f1-s-2 cl5 m-r-8">
@@ -81,7 +87,7 @@
 								
 								<div class="flex-wr-s-s size-w-0">
 									<a href="category-01.php" class="f1-s-2 cl8 hov-link1 m-r-15">
-										قوانين
+								        <?= $categories ;?>
 									</a>
 
 									

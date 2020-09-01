@@ -18,14 +18,13 @@
 		<div class="bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 size-w-0 m-tb-6 flex-wr-s-c">
 				<span style="color:#17b978;"  class="text-uppercase cl2 p-r-8">
-					مستجدات : 
+					مستجدات : &nbsp;
 				</span>
 
 				<span  class="dis-inline-block cl6 slide100-txt pos-relative size-w-0" data-in="fadeInDown" data-out="fadeOutDown" >
 					
 					<?php
 					$sth= $mag->query("SELECT * FROM post ORDER BY id_post DESC lIMIT 0,5");
-					$sth->execute();
 					while ($row = $sth->fetch())
 						{
 						$news= $row['title_post'] ;
@@ -42,12 +41,17 @@
 				</span>
 			</div>
 
-			<div class="pos-relative size-a-2 bo-1-rad-22 of-hidden bocl11 m-tb-6">
-				<input class="f1-s-1 cl6 plh9 s-full p-l-25 p-r-45" type="text" name="search" placeholder="بحث">
-				<button class="flex-c-c size-a-1 ab-t-r fs-20 cl2 hov-cl10 trans-03">
+			<form class="pos-relative size-a-2 bo-1-rad-22 of-hidden bocl11 m-tb-6" method="POST">
+				<input class="f1-s-1 cl6 plh9 s-full p-l-25 p-r-45" type="text" name="search"  placeholder="بحث">
+				<button class="flex-c-c size-a-1 ab-t-r fs-20 cl2 hov-cl10 trans-03" type="submit" name="look-for">
 					<i class="zmdi zmdi-search"></i>
 				</button>
-			</div>
+				<!-----------php/ alert---------------->
+				<?php if(isset($_SESSION['message'])){ ;?>
+                    <p class=" f1-m-2 cl14 "><b><?= $_SESSION['message'] ; ?></b></p>
+                <?php } unset($_SESSION['message']) ; ?>
+                <!-----------php------------------------>
+			</form>
 		</div>
 	</div>
 		
@@ -56,78 +60,107 @@
 		<div class="container">
 			<div class="row m-rl--1">
 				<div class="col-md-6 p-rl-1 p-b-2">
-					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url(images/post-01.jpg);">
-						<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
-
+				    <?php
+					$sth= $mag->query("SELECT * FROM post WHERE id_cat = 3 ORDER BY date_post DESC lIMIT 0,1");
+					while ($row = $sth->fetch())
+					{
+					?>
+					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url(images/ma.jpg);">
+						<a href="blog-detail-01.php?id=<?= $row['id_post'];?>" class="dis-block how1-child1 trans-03"></a>
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-							<a href="blog-list-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+							<a href="blog-list-01.php?cat=إجتهاد قضائي" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 								إجتهاد قضائي 
 							</a>
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
-								<a href="blog-detail-01.php" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
-									قرار محكمة النقض: الوعد بالبيع – أداء باقي الثمن – الإيداع لدى الموثق
+								<a href="blog-detail-01.php?id=<?= $row['id_post'];?>" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
+								<?= $row['title_post']?>
 								</a>
 							</h3>
-
 						</div>
 					</div>
+					<?php
+					}
+					?>
 				</div>
 
 				<div class="col-md-6 p-rl-1">
 					<div class="row m-rl--1">
 						<div class="col-12 p-rl-1 p-b-2">
+						<?php
+				     	$sth= $mag->query("SELECT * FROM post WHERE id_cat = 11 ORDER BY date_post DESC lIMIT 0,1");
+				     	while ($row = $sth->fetch())
+				    	{
+					    ?>
 							<div class="bg-img1 size-a-4 how1 pos-relative" style="background-image: url(images/post-02.jpg);">
-								<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
+								<a href="blog-detail-01.php?id=<?= $row['id_post']?>" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-24">
-									<a href="category-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="category-01.php?sub=فعاليات" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										فعاليات 
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="blog-detail-01.php" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
-											مؤتمر مراكش الدولي حول العدالة - النسخة الأولى: استقلال السلطة القضائية بين ضمان حقوق المتقاضين واحترام قواعد سير العدالة 
+										<a href="blog-detail-01.php?id=<?= $row['id_post']?>" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
+										<?= $row['title_post']?> 
 										</a>
 									</h3>
 								</div>
 							</div>
+						<?php
+						}
+						?>
 						</div>
 
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/post-03.jpg);">
-								<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
-
+						    <?php
+				     	    $sth= $mag->query("SELECT * FROM post WHERE id_cat = 5 ORDER BY date_post DESC lIMIT 0,1");
+				     	    while ($row = $sth->fetch())
+				    	    {
+					        ?>
+							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/etude1.jpg);">
+								<a href="blog-detail-01.php?id=<?= $row['id_post']?>" class="dis-block how1-child1 trans-03"></a>
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="category-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="category-01.php?sub=دراسات" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										دراسات 
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="blog-detail-01.php" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											مبدأ الاحتياط في عقود الخدمات السياحية – في ظل انتشار وباء كورونا –
+										<a href="blog-detail-01.php?id=<?= $row['id_post']?>" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<?= $row['title_post']?> 
 										</a>
 									</h3>
 								</div>
 							</div>
+							<?php
+							}
+							?>
 						</div>
 
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/post-04.jpg);">
-								<a href="blog-detail-01.php" class="dis-block how1-child1 trans-03"></a>
+						    <?php
+				     	    $sth= $mag->query("SELECT * FROM post WHERE id_cat = 6 ORDER BY date_post DESC lIMIT 0,1");
+				     	    while ($row = $sth->fetch())
+				    	    {
+					        ?>
+							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/avi.jpg);">
+								<a href="blog-detail-01.php?id=<?= $row['id_post']?>" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
-									<a href="category-01.php" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
+									<a href="category-01.php?sub=وجهة نظر" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
 										وجهة نظر 
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
-										<a href="blog-detail-01.php" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											وقف تقادم الدعوى العمومية في ظل حالة الطوارئ الصحية 
+										<a href="blog-detail-01.php?id=<?= $row['id_post']?>" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
+										<?= $row['title_post']?> 
 										</a>
 									</h3>
 								</div>
 							</div>
+							<?php
+							}
+							?>
 						</div>
 					</div>
 				</div>
@@ -143,9 +176,9 @@
 					<div class="p-b-20">
 						<!-- مقالات قانونية  -->
 						<div class="tab01 p-b-20">
-							<a href="blog-list-01.php" class="tab01-head how2 how2-cl1 bocl12 flex-s-c m-r-10 m-r-0-sr991">
+							<a href="blog-list-01.php" class="tab01-head how2 how2-cl2 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
-								<h3 class="f1-m-2 cl12 tab01-title">
+								<h3 class="f1-m-2 cl13 tab01-title">
 									مقالات قانونية 
 								</h3>
 
@@ -162,7 +195,7 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
-													<img src="images/post-05.jpg" alt="IMG">
+													<img src="images/avis3.jpg" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
@@ -193,7 +226,7 @@
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-06.jpg" alt="IMG">
+													<img src="images/avis.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
@@ -223,7 +256,7 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-07.jpg" alt="IMG">
+													<img src="images/avis.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
@@ -253,7 +286,7 @@
 											<!-- Item post -->
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="blog-detail-01.php" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="images/post-08.jpg" alt="IMG">
+													<img src="images/etude.jpg" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
@@ -295,9 +328,9 @@
 
 						<!-- فضاء التشريع -->
 						<div class="tab01 p-b-20">
-							<a href="blog-list-01.php" class="tab01-head how2 how2-cl2 bocl12 flex-s-c m-r-10 m-r-0-sr991">
+							<a href="blog-list-01.php" class="tab01-head how2 how2-cl1 bocl12 flex-s-c m-r-10 m-r-0-sr991">
 								<!-- Brand tab -->
-								<h3 class="f1-m-2 cl13 tab01-title">
+								<h3 class="f1-m-2 cl12 tab01-title">
 									فضاء التشريع 
 								</h3>
 
@@ -685,14 +718,14 @@
 
 							<ul class="p-t-35">
 								<li class="flex-wr-sb-c p-b-20">
-									<a href="https://www.facebook.com/OCIAEJ" class="size-a-8 flex-c-c borad-3 size-a-8 bg-facebook fs-16 cl0 hov-cl0">
+									<a href="https://www.facebook.com/%D9%81%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%B9%D8%AF%D8%A7%D9%84%D8%A9-104292537954829" class="size-a-8 flex-c-c borad-3 size-a-8 bg-facebook fs-16 cl0 hov-cl0">
 										<span class="fab fa-facebook-f"></span>
 									</a>
 
 									<div class="size-w-3 flex-wr-sb-c">
 										
 
-										<a href="https://www.facebook.com/OCIAEJ" class="f1-m-3 text-uppercase cl3 hov-cl10 trans-03">
+										<a href="https://www.facebook.com/%D9%81%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%B9%D8%AF%D8%A7%D9%84%D8%A9-104292537954829" class="f1-m-3 text-uppercase cl3 hov-cl10 trans-03">
 											سجل إعجابك بالصفحة
 										</a>
 									</div>
@@ -754,23 +787,28 @@
 					</div>
 
 					<div class="row p-t-35">
+					<?php
+					$sth= $mag->query("SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat ORDER BY date_post DESC lIMIT 0,6");
+					while ($row = $sth->fetch())
+		                {
+						?>
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
 							<div class="m-b-45">
 								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-01.jpg" alt="IMG">
+									<img src="<?=$row['img_post'] ;?>" alt="">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
 										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
-											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
+										<?=$row['title_post'] ;?>
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<span class="f1-s-4 cl8 ">
-											وجهة نظر 
+										<?=$row['name_cat'] ;?> 
 										</span>
 
 										<span class="f1-s-3 m-rl-3">
@@ -778,167 +816,16 @@
 										</span>
 
 										<span class="f1-s-3">
-											12 فبراير 2020
+										<?=$row['date_post'] ;?>
 										</span>
 									</span>
 								</div>
 							</div>
 						</div>
+						<?php
+						}
+					?>
 
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-01.jpg" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
-											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-4 cl8 ">
-											وجهة نظر 
-										</span>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-01.jpg" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
-											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-4 cl8 ">
-											وجهة نظر 
-										</span>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-01.jpg" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
-											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-4 cl8 ">
-											وجهة نظر 
-										</span>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-01.jpg" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
-											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-4 cl8 ">
-											وجهة نظر 
-										</span>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.php" class="wrap-pic-w hov1 trans-03">
-									<img src="images/latest-01.jpg" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.php" class="f1-m-3 cl2 hov-cl10 trans-03">
-											الإشعار بدون صائر في ميدان تحصيل الديون العمومية بين إرادة المشرع وتضارب مواقف القضاء الإداري المغربي.  
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<span class="f1-s-4 cl8 ">
-											وجهة نظر 
-										</span>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											12 فبراير 2020
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -951,26 +838,33 @@
 									صوت و صورة 
 								</h3>
 							</a>
-
+                            <?php
+				         	$sth= $mag->query("SELECT * FROM video ORDER BY date_video DESC lIMIT 0,1");
+				        	while ($row = $sth->fetch())
+		                    {
+						    ?>
 							<div>
 								<div class="wrap-pic-w pos-relative">
-									<iframe  width="320" height="180" src="https://www.youtube.com/embed/tVTNaoYiQac" frameborder="0" allowfullscreen></iframe>	
+									<iframe  width="320" height="180" src="https://www.youtube.com/embed/<?=$row['url_video'] ;?>" frameborder="0" allowfullscreen></iframe>	
 								</div>
 
 								<div class="p-tb-16 p-rl-25 bg3">
 									<h5 class="p-b-5">
-										<a href="https://youtu.be/tVTNaoYiQac" class="f1-m-1 cl0 hov-cl10 trans-03">
-											ضمانات الملزم بالضريبة من خلال إشكالات دعوى بطلان إجراءات التحصيل 
+										<a href="https://youtu.be/<?=$row['url_video'] ;?>" class="f1-m-1 cl0 hov-cl10 trans-03">
+									    	<?=$row['title_video'] ;?> 
 										</a>
 									</h5>
 
 									<span class="cl15">
 										<span class="f1-s-3">
-											12 يوليوز 2020
+										<?=$row['date_video'] ;?> 
 										</span>
 									</span>
 								</div>
-							</div>	
+							</div>
+							<?php
+							}
+							?>	
 						</div>
 							
 						<!-- Subscribe -->
