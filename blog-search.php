@@ -1,15 +1,18 @@
 <?php require 'action.php'; ?>
 
+
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
-	<title>فيديو</title>
+	<title>Search list</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php include 'link.php'; ?>
 </head>
+
 <body class="animsition">
-	
+
 	<!-- Header -->
 	<?php include 'header.php'; ?>
 
@@ -17,14 +20,14 @@
 	<div class="container">
 		<div class="bg0 flex-wr-sb-c p-rl-20 p-tb-8">
 			<div class="f2-s-1 p-r-30 m-tb-6">
+
 				<span class="breadcrumb-item f1-s-2 cl9">
-					صوت و صورة 
+					بحث
 				</span>
 				<a href="index.php" class="breadcrumb-item f1-s-2 cl9">
 					الرئيسية 
 				</a>
-
-				
+					
 			</div>
 
 			<div class="pos-relative size-a-2 bo-1-rad-22 of-hidden bocl11 m-tb-6">
@@ -39,53 +42,53 @@
 	<!-- Page heading -->
 	<div class="container p-t-4 p-b-40">
 		<h2 class="f1-m-2 cl2">
-			عرض الكل
-		</h2>
+		عرض نتائج البحث 
+	
+        </h2>
 	</div>
 
+	<!-- Feature post -->
+	
+
 	<!-- Post -->
-	<section class="bg0 p-b-55">
+	<section class="bg0 p-t-70 p-b-55">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-10 col-lg-8 p-b-80">
 					<div class="row">
-						<!------------php --------------------->
-						<?php
-						$sth= $mag->prepare($query);
-						$sth->bindParam(':cat',$cat);
-						$sth->execute();
-						while ($row = $sth->fetch())
-					    {
-							$id=$row['id_video'];
-							$title=$row['title_video'];
-							$url=$row['url_video'];
-							$date=$row['date_video'];
-							
-							?>
-							<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
+				
+					<div class="col-sm-6 p-r-25 p-r-15-sr991">
+						<!-- Item latest -->
+                <!-----------php/ alert---------------->
+			    <?php if(isset($_SESSION['message'])){ ;?>
+                    <p class=" f1-m-2 cl14 "><b><?= $_SESSION['message'] ; ?></b></p>
+                <?php } unset($_SESSION['message']) ; ?>
+                <!-----------php------------------------>
 							<div class="m-b-45">
-								<div  class="wrap-pic-w ">
-									<iframe  width="320" height="180" src="https://www.youtube.com/embed/<?= $url;?>" frameborder="0" allowfullscreen></iframe>	
-								</div>
+								<a href="blog-detail-01.php?id=<?= $id;?>" class="wrap-pic-w hov1 trans-03">
+									<img src="<?= $image;?>" alt="IMG">
+								</a>
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="https://www.youtube.com/embed/<?= $url;?>" class="f1-m-3 cl2 hov-cl10 trans-03">
-										<?= $title;?>  
-										</a>
+										<a href="blog-detail-01.php?id=<?= $id;?>" class="f1-m-3 cl2 hov-cl10 trans-03"><?= $title;?></a>
 									</h5>
 									<span class="cl8">
+									<span class="f1-s-3">
+											<?= $categories;?>
+										</span>
 										<span class="f1-s-3">
-										<?= $date;?>
+											-
+										</span>
+										<span class="f1-s-3">
+											<?php $date;?>
 										</span>
 									</span>
 								</div>
 							</div>
-						    </div>
-					        <?php	
-				        }
-				        ?>
-						<!------------php --------------------->
+						</div> 
+
+				
+						
 					</div>
 
 					<!-- Pagination -->
@@ -96,7 +99,7 @@
 				</div>
 
 				<div class="col-md-10 col-lg-4 p-b-80">
-					<div class="p-l-10 p-rl-0-sr991">							
+					<div class="p-l-10 p-rl-0-sr991">
 						<!-- Subscribe -->
 						<div class="bg10 p-rl-35 p-t-28 p-b-35 m-b-55">
 							<h5 class="f1-m-5 cl0 p-b-10">
@@ -183,11 +186,11 @@
 
 						<!--  -->
 						<div class="flex-c-s p-b-50">
-							<a href="droit-pub.php">
+							<a href="#">
 								<img class="max-w-full" src="images/banner-02.jpg" alt="IMG">
 							</a>
 						</div>
-						
+
 						<!-- Tag -->
 						<div class="p-b-55">
 							<div class="how2 how2-cl4 flex-s-c m-b-30">
@@ -249,15 +252,16 @@
 	</div>
 
 
-<!--===============================================================================================-->	
+	<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
 </body>
+
 </html>

@@ -23,8 +23,8 @@
 					<!-- print name of category  -->
 					<?= $sub;?>
 				</span>
-				<a href="blog-list-01.php?cat=<?= $row['id_parent'];?> " class="breadcrumb-item f1-s-2 cl9">
-				<?= $row['id_parent'];?>
+				<a href="blog-list-01.php?cat=<?= $_SESSION['cat'];?> " class="breadcrumb-item f1-s-2 cl9">
+				<?= $_SESSION['cat'];?>
 				</a>
 					
 			</div>
@@ -65,10 +65,10 @@
 						$id=$row['id_post'];
                         $title=$row['title_post'];
                         $category=$row['name_cat'];
-                        $author=$row['author_post'];
-                        $text=$row['text_post'];
                         $image=$row['img_post'];
                         $date=$row['date_post'];
+						
+						
 						?>
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
 						<!-- Item latest -->

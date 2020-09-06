@@ -156,6 +156,7 @@ if(isset($_GET['cat'])){
      $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE id_post = :cat";
     }
 
+    $_SESSION['cat']= $cat;
 	
 
 }
@@ -168,7 +169,8 @@ if(isset($_GET['sub'])){
     $sub=$_GET['sub'];
     
     $query= "SELECT * FROM post INNER JOIN categories ON post.id_cat = categories.id_cat WHERE name_cat = '$sub'  ORDER BY date_post DESC";
- 
+
+    
 }
 
 
@@ -250,16 +252,21 @@ if(isset($_GET['id'])){
 
 
         $search = valid_data ($_POST['search']);   
-        $sth = $mag->prepare(" SELECT id_post FROM post WHERE title_post LIKE :search");
-                $sth->bindParam(':search',$search);
-                $sth->execute();
-                while ($row = $sth->fetch())
+        $sth = $mag->query(" SELECT * FROM post WHERE title_post LIKE '%$search%' OR text_post LIKE '%$search%' LIMIT 1");
+        while ($row = $sth->fetch())
         {
+                    
             if($row){
-                header('Location:blog-detail-01.php/id=$row["id_post"]');
+                header("Location:blog-search.php");
+                    $id=$row['id_post'];
+					$title=$row['title_post'];
+					$categories=$row['name_cat'];
+                    $image=$row['img_post'];
+					$date=$row['date_post'];
                 
             }else{
-                $_SESSION['message']= "غير موجود";
+                header("Location:blog-search.php");
+                $_SESSION['message']= "لا توجد نتائج تطابق هذا البحث";
 
             }
 
