@@ -196,7 +196,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .left-topbar-item {
-  font-family: Roboto-Regular;
+  font-family: 'Cairo', serif;
   font-size: 12px;
   color: #ccc;
   line-height: 1.8;
@@ -225,7 +225,7 @@ a.left-topbar-item:hover {
 }
 
 .left-topbar-item:first-child:before {
-  display: none;
+  display: block;
 }
 
 /*---------------------------------------------*/
@@ -1070,13 +1070,12 @@ body {padding-right: 0px !important;}
   display: flex;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::after {
   height: 100%;
-  content: "\f105";
-  font-family: FontAwesome;
+  content: "/";
   font-size: 12px;
   padding-right: 10px;
-  padding-left: 12px;
+  padding-left: 10px;
   color: #999;
 }
 
@@ -1126,7 +1125,7 @@ a.breadcrumb-item:hover {
 .cl-none {color: transparent;}
 .cl0 {color: #fff;}
 .cl1 {color: #111;}
-.cl2 {color: #222;}
+.cl2 {color:#222;}
 .cl3 {color: #333;}
 .cl4 {color: #444;}
 .cl5 {color: #555;}
@@ -1151,43 +1150,43 @@ a.breadcrumb-item:hover {
 /*//////////////////////////////////////////////////////////////////
 [ S-Text 0 - 15 ]*/
 .f1-s-1 {
-  font-family: Roboto-Regular;
+  font-family: 'Amiri', serif;
   font-size: 14px;
   line-height: 1.7;
 }
 
 .f1-s-2 {
-  font-family: Roboto-Regular;
-  font-size: 14px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
   line-height: 1.2;
 }
 
 .f1-s-3 {
-  font-family: Roboto-Regular;
+  font-family: 'Amiri', serif;
   font-size: 12px;
   line-height: 1.7;
 }
 
 .f1-s-4 {
-  font-family: Roboto-Bold;
+  font-family: 'Amiri', serif;
   font-size: 12px;
   line-height: 1.7;
 }
 
 .f1-s-5 {
-  font-family: Roboto-Medium;
+  font-family: 'Amiri', serif;
   font-size: 15px;
   line-height: 1.333333;
 }
 
 .f1-s-6 {
-  font-family: Roboto-Medium;
+  font-family: 'Amiri', serif;
   font-size: 12px;
   line-height: 1.7;
 }
 
 .f1-s-7 {
-  font-family: Roboto-Medium;
+  font-family: 'Amiri', serif;
   font-size: 15px;
   line-height: 1.466667;
 }
@@ -1230,7 +1229,7 @@ a.breadcrumb-item:hover {
 
 /*---------------------------------------------*/
 .f2-s-1 {
-  font-family: Lato-Regular;
+  font-family: 'Cairo', sans-serif;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -1239,43 +1238,44 @@ a.breadcrumb-item:hover {
 /*//////////////////////////////////////////////////////////////////
 [ M-Text 16 - 25 ]*/
 .f1-m-1 {
-  font-family: Roboto-Medium;
+  font-family: 'Amiri', serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
 .f1-m-2 {
-  font-family: Roboto-Medium;
+  font-family: 'Cairo', sans-serif;
   font-size: 18px;
   line-height: 1.333333;
 }
 
 .f1-m-3 {
-  font-family: Roboto-Regular;
+  font-family: 'Amiri', serif;
   font-size: 20px;
   line-height: 1.25;
 }
 
 .f1-m-4 {
-  font-family: Roboto-Bold;
-  font-size: 16px;
+  font-family: 'Scheherazade', serif;
+  font-size: 24px;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .f1-m-5 {
-  font-family: Roboto-Bold;
+  font-family: 'Cairo', sans-serif;
   font-size: 24px;
   line-height: 1.3;
 }
 
 .f1-m-6 {
-  font-family: Roboto-Regular;
+  font-family: 'Amiri', serif;
   font-size: 18px;
   line-height: 1.333333;
 }
 
 .f1-m-7 {
-  font-family: Roboto-Bold;
+  font-family: 'Cairo', sans-serif;
   font-size: 20px;
   line-height: 1.3;
 }
@@ -1284,19 +1284,19 @@ a.breadcrumb-item:hover {
 /*//////////////////////////////////////////////////////////////////
 [ L-Text >= 26 ]*/
 .f1-l-1 {
-  font-family: Roboto-Medium;
+  font-family: 'Amiri', serif;
   font-size: 30px;
   line-height: 1.2;
 }
 
 .f1-l-2 {
-  font-family: Roboto-Medium;
+  font-family: 'Amiri', serif;
   font-size: 22px;
   line-height: 1.272727;
 }
 
 .f1-l-3 {
-  font-family: Roboto-Medium;
+  font-family: 'Cairo', sans-serif;
   font-size: 30px;
   line-height: 1.3;
 }
