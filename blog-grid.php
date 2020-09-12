@@ -60,6 +60,7 @@
 							$title=$row['title_video'];
 							$url=$row['url_video'];
 							$date=$row['date_video'];
+							
 							?>
 							<div class="col-sm-6 p-r-25 p-r-15-sr991">
 							<!-- Item latest -->	
@@ -69,7 +70,7 @@
 								</div>
 								<div class="p-t-16">
 									<h5 class="p-b-5">
-										<a href="<?= $url;?>" class="f1-m-3 cl2 hov-cl10 trans-03">
+										<a href="https://www.youtube.com/embed/<?= $url;?>" class="f1-m-3 cl2 hov-cl10 trans-03">
 										<?= $title;?>  
 										</a>
 									</h5>
@@ -98,22 +99,26 @@
 					<div class="p-l-10 p-rl-0-sr991">							
 						<!-- Subscribe -->
 						<div class="bg10 p-rl-35 p-t-28 p-b-35 m-b-55">
-						<h5 class="f1-m-5 cl0 p-b-10">
-							للإشتراك في المجلة
-						</h5>
+							<h5 class="f1-m-5 cl0 p-b-10">
+								للإشتراك في المجلة
+							</h5>
+							<!-----------php/ alert---------------->
+							<?php if(isset($_SESSION['message'])){ ;?>
+                                <p class=" f1-m-2 cl14 "><b><?= $_SESSION['message'] ; ?></b></p>
+                            <?php } unset($_SESSION['message']) ; ?>
+                            <!-----------php------------------------>
+							<p class="f1-m-1 cl0 p-b-25">
+								توصل بجديد المقالات و النصوص القانونية و الأنشطة العلمية المعلن عنها ، و ذلك من خلال إرسال التفاصيل إلى بريدكم الإلكتروني بشكل دوري 
+							</p>
+							
+							<form  class="size-a-9 pos-relative" action="" method="POST">
+								<input class="s-full f1-m-6 cl6 plh9 p-l-20 p-r-55" type="email" name="email" placeholder="البريد الإلكتروني" required>
 
-						<p class="f1-m-1 cl0 p-b-25">
-							توصل بجديد المقالات و النصوص القانونية و الأنشطة العلمية المعلن عنها ، و ذلك من خلال إرسال التفاصيل إلى بريدكم الإلكتروني بشكل دوري 
-						</p>
-
-						<form  class="size-a-9 pos-relative">
-							<input class="s-full f1-m-6 cl6 plh9 p-l-20 p-r-55" type="text" name="email" placeholder="البريد الإلكتروني">
-
-							<button class="size-a-10 flex-c-c ab-t-r fs-16 cl9 hov-cl10 trans-03">
-								<i class="fa fa-arrow-right"></i>
-							</button>
-						</form>
-					</div>
+                                <button type="submit" name="subscribe" class="size-a-10 flex-c-c ab-t-r fs-16 cl9 hov-cl10 trans-03">
+									<i class="fa fa-arrow-right"></i>
+								</button>	
+							</form>
+						</div>
 
 						<!-- Most Popular -->
 						<div>

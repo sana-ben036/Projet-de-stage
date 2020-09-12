@@ -5,7 +5,7 @@
 <html lang="ar">
 
 <head>
-	<title>category list</title>
+	<title>Search list</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php include 'link.php'; ?>
@@ -22,8 +22,7 @@
 			<div class="f2-s-1 p-r-30 m-tb-6">
 
 				<span class="breadcrumb-item f1-s-2 cl9">
-					<!-- print name of category  -->
-					<?= $cat;?>
+					بحث
 				</span>
 				<a href="index.php" class="breadcrumb-item f1-s-2 cl9">
 					الرئيسية 
@@ -43,8 +42,9 @@
 	<!-- Page heading -->
 	<div class="container p-t-4 p-b-40">
 		<h2 class="f1-m-2 cl2">
-		عرض الكل 
-		</h2>
+		عرض نتائج البحث 
+	
+        </h2>
 	</div>
 
 	<!-- Feature post -->
@@ -56,23 +56,14 @@
 			<div class="row justify-content-center">
 				<div class="col-md-10 col-lg-8 p-b-80">
 					<div class="row">
-				<!------------php --------------------->
-				<?php
-				$sth= $mag->prepare($query);
-				$sth->bindParam(':cat',$cat);
-				$sth->execute();
-				while ($row = $sth->fetch())
-				{
-					$id=$row['id_post'];
-					$title=$row['title_post'];
-					$categories=$row['name_cat'];
-					$author=$row['author_post'];
-					$text=$row['text_post'];
-					$image=$row['img_post'];
-					$date=$row['date_post'];
-					?>
+				
 					<div class="col-sm-6 p-r-25 p-r-15-sr991">
 						<!-- Item latest -->
+                <!-----------php/ alert---------------->
+			    <?php if(isset($_SESSION['message'])){ ;?>
+                    <p class=" f1-m-2 cl14 "><b><?= $_SESSION['message'] ; ?></b></p>
+                <?php } unset($_SESSION['message']) ; ?>
+                <!-----------php------------------------>
 							<div class="m-b-45">
 								<a href="blog-detail-01.php?id=<?= $id;?>" class="wrap-pic-w hov1 trans-03">
 									<img src="<?= $image;?>" alt="IMG">
@@ -89,18 +80,14 @@
 											-
 										</span>
 										<span class="f1-s-3">
-											<?= $date;?>
+											<?php $date;?>
 										</span>
 									</span>
 								</div>
 							</div>
 						</div> 
 
-					<?php
-				}
-
-				?>
-                <!--------php --------------------->
+				
 						
 					</div>
 

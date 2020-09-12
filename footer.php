@@ -10,7 +10,7 @@
 						</div>
 
 						<div>
-							<p class="f1-s-1 cl11 p-b-16">
+							<p style="text-align:justify;" class="f1-s-1 cl11 p-b-16">
 								تهتم المجلة بنشر مختلف المواد التي لها علاقة بمجال القانون المغربي ، سواء المقالات القانونية أو الرسائل والأطروحات بما في ذلك الاجتهادات القضائية. وفي إطار تقريب المعلومة القانونية دائما، يقوم الموقع بدور الوسيط ولاسيما ما يخص النصوص القانونية المغربية والمقارنة، وكدا مختلف المجالات الاليكترونية والتي تهتم بالمجال القانون. وفي هذا الإطار لا يتحمل الموقع أية مسؤولية في المواد المنشور، وإنما ينسب الفكر أو التوجه لصاحب المقال، ونضع رهن إشارة الزائر، في حالة أي إخلال أو مس بالأمانة العلمية أو في ما يتعلق بأي محتوى خارج المادة العلمية المنشورة، التواصل معنا من أجل معالجة المشكل وذلك عبر البريد الإلكتروني
 							</p>
 
@@ -19,7 +19,7 @@
 							</p>
 
 							<div class="p-t-15">
-								<a href="https://www.facebook.com/OCIAEJ" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+								<a href="https://www.facebook.com/%D9%81%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%B9%D8%AF%D8%A7%D9%84%D8%A9-104292537954829" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
 									<span class="fab fa-facebook-f"></span>
 								</a>
 
@@ -106,35 +106,33 @@
 						</div>
 
 						<ul class="m-t--12">
+						<?php
+				    	$sth= $mag->query("SELECT name_cat, COUNT(id_post) FROM categories INNER JOIN post ON  categories.id_cat = post.id_cat  GROUP BY id_parent  ");
+					    while ($row = $sth->fetch())
+		                {
+						?>
 							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									فضاء التشريع (22)
+								<a href="blog-list-01.php?cat=<?=$row['name_cat'] ;?>" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+								<?=$row['name_cat'] ;?> (<?=$row['COUNT(id_post)'] ;?>)
 								</a>
 							</li>
+						<?php
+						}
+						?>
 
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									مقالات قانونية  (22)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									إجتهاد قضائي (22)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-list-01.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-								    أنشطة علمية (22)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="blog-grid.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-								    صوت و صورة (22)
-								</a>
-							</li>
+						<?php $sth = $mag->query("SELECT COUNT(*) FROM video "); 
+						while ($row = $sth->fetch())
+		                {
+						?>
+						
+						    <li class="how-bor1 p-rl-5 p-tb-10">
+						        <a href="blog-grid.php" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+						   	صوت و صورة (<?=$row['COUNT(*)'] ;?>)
+					        	</a>
+				        	</li>
+						<?php
+						}
+						?>
 						</ul>
 					</div>
 				</div>
